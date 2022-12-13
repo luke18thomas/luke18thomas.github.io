@@ -36,15 +36,5 @@ var i = 0;
 
 var files = [];
 
-files.push("Film/1_000213600007.jpg")
-files.push("Film/2_000213600011.jpg")
-files.push("Film/3_000213590005.jpg")
-files.push("Film/4_000105150022.jpg")
-files.push("Film/5_000017810007.jpg")
-files.push("Film/6_000017820029.jpg")
-files.push("Film/7_000036930017.jpg")
-files.push("Film/8_000017810001.jpg")
-files.push("Film/9_000036940002.jpg")
-files.push("Film/10_000017810022.jpg")
-files.push("Film/11_000017810006.jpg")
-files.push("Film/12_000213600023.jpg")
+files.push("1_000213600007.jpg")
+
