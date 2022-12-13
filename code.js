@@ -14,10 +14,9 @@ document.getElementById('photo').addEventListener("click", function(e) {
     else changePhoto('right')
 })
 
-function setSelection(s) {
-    selection = s;
-    console.log(s);
-    console.log(selection);
+function setPhotosTitle(s) {
+    console.log('<h1 id="photos_h1">' + s + '</h1>');
+    document.getElementById('photos_h1').innerHTML = '<h1 id="photos_h1">' + s + '</h1>';
 }
 
 function changePhoto(dir) {
@@ -36,12 +35,10 @@ function changePhoto(dir) {
     document.getElementById('photo').src = files[i];
 }
 
-var selection = 'selection';
-
-document.getElementById('category').innerHTML = '<h1 id="category">weehawken</h1>'
-
 var i = 0;
 
 var files = [];
 
-files.push("https://luke18thomas.github.io/photos/1_000213600007.jpg")
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-01.jpg")
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-02.jpg")
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-03.jpg")
