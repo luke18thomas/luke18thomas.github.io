@@ -2,14 +2,30 @@ body {
     height: 100vh;
     margin: 0;
     font-family: "Roboto";
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
     border-style: none;
 }
 
-.menu {
+.page {
     display:flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#photo_div {
+    display: none;
+}
+
+#frame_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 ul {
@@ -28,13 +44,6 @@ a:hover, a:active {
 
 h1 {
     font-size: 1em;
-}
-
-.container {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    border-style: none;
 }
 
 .frame {

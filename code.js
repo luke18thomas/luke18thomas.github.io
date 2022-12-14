@@ -2,12 +2,26 @@ var i = 0;
 
 var files = [];
 
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-03.jpg")
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-04.jpg")
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-11.jpg")
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-03.jpg");
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-04.jpg");
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-11.jpg");
 
+var t = ''
 
-function setTitle(t) {
+function updateState(s) {
+    if (s == "menu") {
+        document.querySelector("#photo_div").style = "display: none";
+        document.querySelector("#menu_div").style = "display: flex";
+    }
+    else {
+        document.querySelector("#menu_div").style = "display: none";
+        document.querySelector("#photo_div").style = "display: flex";
+        document.getElementById("photo_h1").innerHTML = '<h1 id="photo_h1">' + s + '</h1>';
+        
+    }
+}
+
+function setTitle() {
     console.log('<h1 id="photos_h1">' + t + '</h1>');
     document.getElementById('photos_h1').innerHTML = '<h1 id="photos_h1">' + t + '</h1>';
 }
@@ -15,16 +29,13 @@ function setTitle(t) {
 function changePhoto(dir) {
 
     if (dir ==  'left') {
-        if (i == 0)
-            i = files.length - 1
+        if (i == 0) i = files.length - 1
         else i--
     }
     else {
-        if (i == files.length - 1)
-            i = 0
+        if (i == files.length - 1) i = 0
         else i++
     }
-    console.log(i);
     document.getElementById('photo').src = files[i];
 }
 
