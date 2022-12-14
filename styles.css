@@ -15,18 +15,13 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 1.5em;
-}
-
-#photo_div {
     display: none;
 }
 
-#frame_buttons {
+#menu_div {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
+
 
 ul {
     list-style-type: none;

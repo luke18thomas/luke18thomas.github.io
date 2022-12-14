@@ -16,13 +16,28 @@ files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-09.jpg");
 function updateState(s) {
     if (s == "menu") {
         document.querySelector("#photo_div").style = "display: none";
+        document.querySelector("#grid_div").style = "display: none";
         document.querySelector("#menu_div").style = "display: flex";
     }
-    else if (s == 'weehawken') {
+    else if (s == "weehawken") {
         document.querySelector("#menu_div").style = "display: none";
         document.querySelector("#photo_div").style = "display: flex";
         document.getElementById("photo_h1").innerHTML = '<h1 id="photo_h1">' + s + '</h1>';
         
+    }
+    else if (s == "grid") {
+        document.querySelector("#menu_div").style = "display: none";
+        document.querySelector("#grid_div").style = "display: flex";
+
+        for (j = 0; j < 1; j++) {
+            let el = document.createElement("img");
+            let name = "photos/weehawken/weehawken-0" + (j+1) + ".jpg";
+            console.log(name)
+            el.innerHTML = "<img src=" + name + ">";
+            console.log(el);
+            console.log(el.innerHTML)
+            document.querySelector("#grid_div").appendChild(el);
+        }
     }
 }
 
