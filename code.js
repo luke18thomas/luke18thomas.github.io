@@ -2,11 +2,16 @@ var i = 0;
 
 var files = [];
 
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-01.jpg");
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-02.jpg");
 files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-03.jpg");
 files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-04.jpg");
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-11.jpg");
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-05.jpg");
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-06.jpg");
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-07.jpg");
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-08.jpg");
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-09.jpg");
 
-var t = ''
 
 function updateState(s) {
     if (s == "menu") {
