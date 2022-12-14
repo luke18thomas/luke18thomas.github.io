@@ -19,7 +19,7 @@ function updateState(s) {
         document.querySelector("#grid_div").style = "display: none";
         document.querySelector("#menu_div").style = "display: flex";
     }
-    else if (s == "weehawken") {
+    else if (s == "weehawken + hoboken") {
         document.querySelector("#menu_div").style = "display: none";
         document.querySelector("#photo_div").style = "display: flex";
         document.getElementById("photo_h1").innerHTML = '<h1 id="photo_h1">' + s + '</h1>';
