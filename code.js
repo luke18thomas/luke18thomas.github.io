@@ -13,7 +13,7 @@ function updateState(s) {
         document.querySelector("#photo_div").style = "display: none";
         document.querySelector("#menu_div").style = "display: flex";
     }
-    else {
+    else if (s == 'weehawken') {
         document.querySelector("#menu_div").style = "display: none";
         document.querySelector("#photo_div").style = "display: flex";
         document.getElementById("photo_h1").innerHTML = '<h1 id="photo_h1">' + s + '</h1>';
