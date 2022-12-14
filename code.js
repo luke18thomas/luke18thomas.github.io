@@ -1,22 +1,15 @@
-document.addEventListener('keypress', function(e) {
+var i = 0;
 
-    var code = e.which || e.keyCode;
-    if (code == '44') changePhoto('left')
-    if (code == '46') changePhoto('right')
-})
+var files = [];
 
-document.getElementById('photo').addEventListener("click", function(e) {
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-03.jpg")
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-04.jpg")
+files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-11.jpg")
 
-    var x = e.clientX;
-    let mid = document.getElementById('photo').width;
-    
-    if (x < mid/2) changePhoto('left')
-    else changePhoto('right')
-})
 
-function setPhotosTitle(s) {
-    console.log('<h1 id="photos_h1">' + s + '</h1>');
-    document.getElementById('photos_h1').innerHTML = '<h1 id="photos_h1">' + s + '</h1>';
+function setTitle(t) {
+    console.log('<h1 id="photos_h1">' + t + '</h1>');
+    document.getElementById('photos_h1').innerHTML = '<h1 id="photos_h1">' + t + '</h1>';
 }
 
 function changePhoto(dir) {
@@ -35,10 +28,19 @@ function changePhoto(dir) {
     document.getElementById('photo').src = files[i];
 }
 
-var i = 0;
 
-var files = [];
+document.addEventListener('keypress', function(e) {
 
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-01.jpg")
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-02.jpg")
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-03.jpg")
+    var code = e.which || e.keyCode;
+    if (code == '44') changePhoto('left')
+    if (code == '46') changePhoto('right')
+})
+
+document.getElementById('photo').addEventListener("click", function(e) {
+
+    var x = e.clientX;
+    let mid = document.getElementById('photo').width;
+    
+    if (x < mid/2) changePhoto('left')
+    else changePhoto('right')
+})
