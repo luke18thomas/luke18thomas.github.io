@@ -13,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     display: none;
 }
 
@@ -24,7 +24,7 @@ body {
 
 ul {
     list-style-type: none;
-    padding-top: 10vh;
+    padding-top: 5%;
     line-height: 70px;
     text-align: left;
 }
@@ -42,9 +42,8 @@ h1 {
 
 .frame {
     display: flex;
-    padding: 1% 5% 5% 5%;
-    width: 90%;
-    height: 80vh;
+    padding: 2% 5% 5% 5%;
+    height: 85vh;
     border-style:none;
 }
 
