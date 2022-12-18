@@ -87,7 +87,7 @@ a:hover, a:active {
 .thumbnail img {
     /*object-fit: cover;*/
     object-fit: contain;
-    width: 30vh;
-    height: 30vh;
+    width: 35vh;
+    height: 35vh;
     border-style: none;
 }
