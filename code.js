@@ -17,8 +17,6 @@ files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-09.jpg");
 
 function changePage(p) {
 
-    console.log("changing page to... " + "#" + p + "_div");
-
     document.querySelectorAll(".page").forEach((page) => page.style = "display: none")
     document.querySelectorAll("#" + p + "_div").forEach((page) => page.style = "display: flex");
 
@@ -36,15 +34,13 @@ function loadGrid(p) {
         
         files.forEach((path) => {
 
-            let k = Number(path.substring(path.length-5, path.length-4))
-            console.log(k)
+            let k = Number(path.substring(path.length-6, path.length-4))
             
             let el = document.createElement("div");
             el.innerHTML =
                     "<div class='thumbnail'> <img src='" + path + "'"
                     + "onclick='setPhoto(" + k + ")'> </div> ";
             document.querySelector(".grid").append(el);
-            console.log(el.innerHTML)
         })
         
     }
