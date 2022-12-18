@@ -83,7 +83,7 @@ a:hover, a:active {
 }
 
 .thumbnail img {
-    object-fit: fill;
+    object-fit: cover;
     width: 20vh;
     height: 20vh;
     border-style: none;
