@@ -2,9 +2,9 @@ var i = 0;
 
 var files = [];
 
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-01.jpg");
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-02.jpg");
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-03.jpg");
+files.push("photos/weehawken/weehawken-01.jpg");
+files.push("photos/weehawken/weehawken-02.jpg");
+files.push("photos/weehawken/weehawken-03.jpg");
 files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-04.jpg");
 files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-05.jpg");
 files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-06.jpg");
@@ -34,21 +34,28 @@ function updateState(s) {
 function loadGrid(s) {
 
     let numNodes = document.querySelector('.grid').childNodes.length
-    console.log(numNodes)
-    console.log(files.length)
 
     if (numNodes != files.length) {
-
-         document.querySelector(".grid").replaceChildren();
-    
-          for (j = 1; j < files.length + 1; j++) {
-             let el = document.createElement("div");
-             el.innerHTML = "<div class='thumbnail'> <img src='photos/weehawken/weehawken-0"
+        
+        document.querySelector(".grid").replaceChildren();
+        
+        files.forEach(
+            (path) => {
+                let el = document.createElement("div");
+                el.innerHTML = "<div class='thumbnail'> <img src='" + path + "'> </div> ";
+                document.querySelector(".grid").append(el);
+                delete el;
+            }
+        )
+        
+        /*for (j = 1; j < files.length + 1; j++) {
+            let el = document.createElement("div");
+            el.innerHTML = "<div class='thumbnail'> <img src='photos/weehawken/weehawken-0"
                              + j
                              + ".jpg'> </div> ";
-             document.querySelector(".grid").append(el);
-              delete el;
-        }
+            document.querySelector(".grid").append(el);
+            delete el;
+        }*/
     }
 }
 
@@ -86,3 +93,5 @@ document.getElementById('photo').addEventListener("click", function(e) {
     if (x < mid/2) changePhoto('left')
     else changePhoto('right')
 })
+
+document.getElementByClassName
