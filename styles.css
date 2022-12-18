@@ -23,13 +23,11 @@ body {
 .page {
     display:flex;
     flex-direction: column;
-    /*height: 100vh;*/
     align-items: center;
     justify-content: flex-start;
     text-align: center;
     display: none;
     border-style: none;
-    background: white;
 }
 
 #menu_div {
@@ -70,9 +68,10 @@ a:hover, a:active {
     padding-left: 2%;
     padding-right: 2%;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .grid div {
@@ -84,10 +83,30 @@ a:hover, a:active {
     border-style: none;
 }
 
+
+
 .thumbnail img {
     /*object-fit: cover;*/
     object-fit: contain;
-    width: 35vh;
-    height: 35vh;
+    width: 50vh;
     border-style: none;
+}
+
+@media screen and (max-width: 600px) {
+    .page {
+        background: white;
+        color: white;
+    }
+    .grid {
+        margin: 10% 0% 0% 0%;
+    }
+    .thumbnail {
+        width: 100vw;
+    }
+    .grid div {
+        padding: 0% 0% 5% 0%;
+    }
+    .thumbnail img {
+        width: 100vw;
+    }
 }
