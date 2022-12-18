@@ -31,18 +31,19 @@ function updateState(s) {
         if (numNodes != files.length) {
 
             document.querySelector(".grid").replaceChildren();
-        
-            document.querySelector("#menu_div").style = "display: none";
-            document.querySelector("#photo_div").style = "display: none";
-            document.querySelector("#grid_div").style = "display: flex";
     
             for (j = 1; j < files.length; j++) {
+                console.log(j)
                 let el = document.createElement("div");
                 el.innerHTML = "<div class='thumbnail'> <img src='https://luke18thomas.github.io/photos/weehawken/weehawken-0" + j + ".jpg'> </div> ";
                 document.querySelector(".grid").append(el);
                 delete el;
             }
         }
+
+        document.querySelector("#menu_div").style = "display: none";
+        document.querySelector("#photo_div").style = "display: none";
+        document.querySelector("#grid_div").style = "display: flex";
     }
 }
 

@@ -14,13 +14,10 @@ body {
     width: 100 vw;
     height: 3%;
     padding: 2% 0% 0% 0%;
-    border-style: dashed;
     flex-direction: row;
     align-items: center;
     font-size: 3vh;
-    font-weight: 400;
-    border-style: none;
-    border-color: black;
+    font-weight: 500;
 }
 
 .page {
