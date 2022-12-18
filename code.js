@@ -7,12 +7,12 @@ var files = [];
 files.push("photos/weehawken/weehawken-01.jpg");
 files.push("photos/weehawken/weehawken-02.jpg");
 files.push("photos/weehawken/weehawken-03.jpg");
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-04.jpg");
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-05.jpg");
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-06.jpg");
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-07.jpg");
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-08.jpg");
-files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-09.jpg");
+files.push("photos/weehawken/weehawken-04.jpg");
+files.push("photos/weehawken/weehawken-05.jpg");
+files.push("photos/weehawken/weehawken-06.jpg");
+files.push("photos/weehawken/weehawken-07.jpg");
+files.push("photos/weehawken/weehawken-08.jpg");
+files.push("photos/weehawken/weehawken-09.jpg");
 
 
 function changePage(p) {
@@ -21,6 +21,8 @@ function changePage(p) {
     document.querySelectorAll("#" + p + "_div").forEach((page) => page.style = "display: flex");
 
     if (p == "grid") { loadGrid(p) }
+
+    /*document.querySelector(".page").scrollTo(0,0)*/
         
 }
 
@@ -52,7 +54,8 @@ function setTitle() {
 }
 
 function setPhoto(k) {
-    document.getElementById('photo').src = files[k-1];
+    i = k-1
+    document.getElementById('photo').src = files[i];
 }
 
 function changePhoto(dir, source) {

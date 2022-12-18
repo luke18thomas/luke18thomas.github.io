@@ -23,7 +23,7 @@ body {
 .page {
     display:flex;
     flex-direction: column;
-    height: 100vh;
+    /*height: 100vh;*/
     align-items: center;
     justify-content: flex-start;
     text-align: center;
@@ -34,6 +34,7 @@ body {
 
 #menu_div {
     display: flex;
+    justify-content:flex-end;
 }
 
 
@@ -64,8 +65,10 @@ a:hover, a:active {
 }
 
 .grid {
-    width: 95%;
-    padding: 5% 0% 0% 0%;
+    width: 100%;
+    padding-top: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -73,18 +76,18 @@ a:hover, a:active {
 }
 
 .grid div {
-    padding: 1%;
+    padding: 1vw;
 }
 
 .thumbnail {
     display: flex;
-    padding: 1%;
     border-style: none;
 }
 
 .thumbnail img {
-    object-fit: cover;
-    width: 20vh;
-    height: 20vh;
+    /*object-fit: cover;*/
+    object-fit: contain;
+    width: 30vh;
+    height: 30vh;
     border-style: none;
 }
