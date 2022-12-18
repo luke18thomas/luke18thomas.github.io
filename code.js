@@ -22,22 +22,23 @@ function updateState(s) {
     else if (s == "weehawken + hoboken") {
         document.querySelector("#menu_div").style = "display: none";
         document.querySelector("#photo_div").style = "display: flex";
-        document.getElementById("photo_h1").innerHTML = '<h1 id="photo_h1">' + s + '</h1>';
+        /*document.getElementById("button").innerHTML;*/
         
     }
     else if (s == "grid") {
         document.querySelector("#menu_div").style = "display: none";
         document.querySelector("#grid_div").style = "display: flex";
 
-        for (j = 0; j < 1; j++) {
+        /*for (j = 0; j < 1; j++) {*/
             let el = document.createElement("img");
-            let name = "photos/weehawken/weehawken-0" + (j+1) + ".jpg";
+            /*let name = "photos/weehawken/weehawken-0" + (j+1) + ".jpg";
             console.log(name)
-            el.innerHTML = "<img src=" + name + ">";
+            el.innerHTML = "<img src=" + name + ">";*/
+            el.innerHTML = "<img src='photos/weehawken/weehawken-01.jpg'>"
             console.log(el);
             console.log(el.innerHTML)
             document.querySelector("#grid_div").appendChild(el);
-        }
+        /*}*/
     }
 }
 
