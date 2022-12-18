@@ -22,23 +22,27 @@ function updateState(s) {
     else if (s == "weehawken + hoboken") {
         document.querySelector("#menu_div").style = "display: none";
         document.querySelector("#photo_div").style = "display: flex";
-        /*document.getElementById("button").innerHTML;*/
         
     }
     else if (s == "grid") {
-        document.querySelector("#menu_div").style = "display: none";
-        document.querySelector("#grid_div").style = "display: flex";
 
-        /*for (j = 0; j < 1; j++) {*/
-            let el = document.createElement("img");
-            /*let name = "photos/weehawken/weehawken-0" + (j+1) + ".jpg";
-            console.log(name)
-            el.innerHTML = "<img src=" + name + ">";*/
-            el.innerHTML = "<img src='photos/weehawken/weehawken-01.jpg'>"
-            console.log(el);
-            console.log(el.innerHTML)
-            document.querySelector("#grid_div").appendChild(el);
-        /*}*/
+        let numNodes = document.querySelector('.grid').childNodes.length
+
+        if (numNodes != files.length) {
+
+            document.querySelector(".grid").replaceChildren();
+        
+            document.querySelector("#menu_div").style = "display: none";
+            document.querySelector("#photo_div").style = "display: none";
+            document.querySelector("#grid_div").style = "display: flex";
+    
+            for (j = 1; j < files.length; j++) {
+                let el = document.createElement("div");
+                el.innerHTML = "<div class='thumbnail'> <img src='https://luke18thomas.github.io/photos/weehawken/weehawken-0" + j + ".jpg'> </div> ";
+                document.querySelector(".grid").append(el);
+                delete el;
+            }
+        }
     }
 }
 
@@ -48,7 +52,7 @@ function setTitle() {
 }
 
 function changePhoto(dir) {
-
+    
     if (dir ==  'left') {
         if (i == 0) i = files.length - 1
         else i--
@@ -69,7 +73,7 @@ document.addEventListener('keypress', function(e) {
 })
 
 document.getElementById('photo').addEventListener("click", function(e) {
-
+    
     var x = e.clientX;
     let mid = document.getElementById('photo').width;
     
