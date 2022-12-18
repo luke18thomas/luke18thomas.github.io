@@ -1,5 +1,7 @@
 var i = 0;
 
+var pick = "";
+
 var files = [];
 
 files.push("photos/weehawken/weehawken-01.jpg");
@@ -13,25 +15,18 @@ files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-08.jpg");
 files.push("https://luke18thomas.github.io/photos/weehawken/weehawken-09.jpg");
 
 
-function updateState(s) {
-    if (s == "menu") {
-        document.querySelector("#photo_div").style = "display: none";
-        document.querySelector("#grid_div").style = "display: none";
-        document.querySelector("#menu_div").style = "display: flex";
-    }
-    else if (s == "weehawken + hoboken") {
+function changePage(p) {
 
-        loadGrid(s)
-        
-        document.querySelector("#menu_div").style = "display: none";
-        document.querySelector("#photo_div").style = "display: none";
-        document.querySelector("#grid_div").style = "display: flex";
-        
-    }
+    console.log("changing page to... " + "#" + p + "_div");
+
+    document.querySelectorAll(".page").forEach((page) => page.style = "display: none")
+    document.querySelectorAll("#" + p + "_div").forEach((page) => page.style = "display: flex");
+
+    if (p == "grid") { loadGrid(p) }
         
 }
 
-function loadGrid(s) {
+function loadGrid(p) {
 
     let numNodes = document.querySelector('.grid').childNodes.length
 
@@ -39,23 +34,19 @@ function loadGrid(s) {
         
         document.querySelector(".grid").replaceChildren();
         
-        files.forEach(
-            (path) => {
-                let el = document.createElement("div");
-                el.innerHTML = "<div class='thumbnail'> <img src='" + path + "'> </div> ";
-                document.querySelector(".grid").append(el);
-                delete el;
-            }
-        )
-        
-        /*for (j = 1; j < files.length + 1; j++) {
+        files.forEach((path) => {
+
+            let k = Number(path.substring(path.length-5, path.length-4))
+            console.log(k)
+            
             let el = document.createElement("div");
-            el.innerHTML = "<div class='thumbnail'> <img src='photos/weehawken/weehawken-0"
-                             + j
-                             + ".jpg'> </div> ";
+            el.innerHTML =
+                    "<div class='thumbnail'> <img src='" + path + "'"
+                    + "onclick='setPhoto(" + k + ")'> </div> ";
             document.querySelector(".grid").append(el);
-            delete el;
-        }*/
+            console.log(el.innerHTML)
+        })
+        
     }
 }
 
@@ -64,17 +55,22 @@ function setTitle() {
     document.getElementById('photos_h1').innerHTML = '<h1 id="photos_h1">' + t + '</h1>';
 }
 
-function changePhoto(dir) {
+function setPhoto(k) {
+    document.getElementById('photo').src = files[k-1];
+}
+
+function changePhoto(dir, source) {
     
     if (dir ==  'left') {
         if (i == 0) i = files.length - 1
         else i--
     }
-    else {
+    else if (dir == 'right') {
         if (i == files.length - 1) i = 0
         else i++
     }
     document.getElementById('photo').src = files[i];
+    
 }
 
 

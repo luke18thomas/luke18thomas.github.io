@@ -14,12 +14,11 @@
   <div class="page" id="menu_div">
   
     <ul>
-      <li onclick="updateState('california')"><a>california</a></li>
-      <li onclick="updateState('weehawken + hoboken')"><a>weehawken + hoboken</a></li>
-      <li onclick="updateState('grid')"><a>grid</a></li>
-      <li onclick="updateState('new york city')"><a>new york city</a></li>
-      <li onclick="updateState('colorado')"><a>colorado</a></li>
-      <li onclick="updateState('film')"><a>film</a></li>
+      <li onclick=""><a>california</a></li>
+      <li onclick="changePage('grid')"><a>weehawken + hoboken</a></li>
+      <li onclick=""><a>new york city</a></li>
+      <li onclick=""><a>colorado</a></li>
+      <li onclick=""><a>film</a></li>
     </ul>
   
   </div>
@@ -29,10 +28,10 @@
   <div class="page" id="grid_div">
 
     <div class="header" id="grid_header">
-      <a onclick = "updateState('menu')"> <</a>
+      <a onclick = "changePage('menu')"> <</a>
     </div>
 
-    <div class="grid">
+    <div class="grid" onclick="changePage('photo')"</div>
     
     </div>
       
@@ -44,7 +43,7 @@
 
     <div class="header" id="photo_header">
     
-      <a id="button" onclick="updateState('menu')"><</a>
+      <a id="button" onclick="changePage('grid')"><</a>
       
     </div>
       
