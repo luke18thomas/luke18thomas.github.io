@@ -42,8 +42,7 @@ function loadPhotos(p) {
             
             let el = document.createElement("div");
             el.innerHTML =
-                    "<div class='thumbnail'> <img src='" + path + "'"
-                    + "onclick='setPhoto(" + k + ")'> </div> ";
+                    "<div class='thumbnail'> <img src='" + path + "'> </div> ";
             document.querySelector("#photos").append(el);
         })
         
