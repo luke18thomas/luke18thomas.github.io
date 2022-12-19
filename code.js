@@ -4,17 +4,17 @@ var pick = "";
 
 var files = [];
 
-files.push("photos/film/film-01.jpg");
-files.push("photos/film/film-02.jpg");
-files.push("photos/film/film-03.jpg");
-files.push("photos/film/film-04.jpg");
-files.push("photos/film/film-05.jpg");
-files.push("photos/film/film-06.jpg");
-files.push("photos/film/film-07.jpg");
-files.push("photos/film/film-08.jpg");
-files.push("photos/film/film-09.jpg");
-files.push("photos/film/film-10.jpg");
-files.push("photos/film/film-11.jpg");
+files.push("photos/weehawken/weehawken-01.jpg");
+files.push("photos/weehawken/weehawken-02.jpg");
+files.push("photos/weehawken/weehawken-03.jpg");
+files.push("photos/weehawken/weehawken-04.jpg");
+files.push("photos/weehawken/weehawken-05.jpg");
+files.push("photos/weehawken/weehawken-06.jpg");
+files.push("photos/weehawken/weehawken-07.jpg");
+files.push("photos/weehawken/weehawken-08.jpg");
+files.push("photos/weehawken/weehawken-09.jpg");
+
+loadPhotos("weehawken")
 
 
 function changePage(p) {
@@ -22,19 +22,19 @@ function changePage(p) {
     document.querySelectorAll(".page").forEach((page) => page.style = "display: none")
     document.querySelectorAll("#" + p + "_div").forEach((page) => page.style = "display: flex");
 
-    if (p == "grid") { loadGrid(p) }
+    if (p != "menu") { loadPhotos(p) }
 
     /*document.querySelector(".page").scrollTo(0,0)*/
         
 }
 
-function loadGrid(p) {
+function loadPhotos(p) {
 
-    let numNodes = document.querySelector('.grid').childNodes.length
+    let numNodes = document.querySelector('#photos').childNodes.length
 
     if (numNodes != files.length) {
         
-        document.querySelector(".grid").replaceChildren();
+        document.querySelector("#photos").replaceChildren();
         
         files.forEach((path) => {
 
@@ -44,7 +44,7 @@ function loadGrid(p) {
             el.innerHTML =
                     "<div class='thumbnail'> <img src='" + path + "'"
                     + "onclick='setPhoto(" + k + ")'> </div> ";
-            document.querySelector(".grid").append(el);
+            document.querySelector("#photos").append(el);
         })
         
     }
@@ -82,6 +82,7 @@ document.addEventListener('keypress', function(e) {
     if (code == '46') changePhoto('right')
 })
 
+/*
 document.getElementById('photo').addEventListener("click", function(e) {
     
     var x = e.clientX;
@@ -90,5 +91,4 @@ document.getElementById('photo').addEventListener("click", function(e) {
     if (x < mid/2) changePhoto('left')
     else changePhoto('right')
 })
-
-document.getElementByClassName
+*/

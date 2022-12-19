@@ -11,17 +11,22 @@ body {
 
 .header {
     display: flex;
-    width: 100 vw;
-    height: 3%;
-    padding: 2% 0% 0% 0%;
+    min-width: 100vw;
+    height: 95vh;
     flex-direction: row;
-    align-items: center;
     font-size: 3vh;
     font-weight: 400;
+    color: black;
+    /*background-image: url('photos/film/film-06.jpg');*/
+    background-image: url('photos/weehawken/weehawken-07.jpg');
+    background-position: 0 20%;
+    background-repeat: no-repeat;
+    background-size: cover;*/
 }
 
 .page {
     display:flex;
+    width: 100vw;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -30,11 +35,22 @@ body {
     border-style: none;
 }
 
-#menu_div {
+#banner {
     display: flex;
-    justify-content:flex-end;
+}
+#banner img {
+    object-fit: cover;
+    width: 100vw;
+    height: 50vh
 }
 
+#menu_div {
+    display: none;
+    justify-content:flex-end;
+}
+#content_div {
+    display: flex;
+}
 
 ul {
     list-style-type: none;
@@ -53,20 +69,11 @@ a:hover, a:active {
     display: flex;
     border-style:none;
     border-color: black;
-    padding: 4% 3% 0% 3%;
+    padding: 4% 0% 0% 0%;
 }
 
-.photo_frame img {
-    object-fit: contain;
+#photos {
     width: 100%;
-    height: 80vh;
-}
-
-.grid {
-    width: 100%;
-    padding-top: 10%;
-    padding-left: 2%;
-    padding-right: 2%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -74,39 +81,22 @@ a:hover, a:active {
     /*flex-wrap: wrap;*/
 }
 
-.grid div {
-    padding: 1vw;
+#photos div {
+    margin: 5vh;
 }
 
 .thumbnail {
     display: flex;
-    border-style: none;
 }
-
-
-
 .thumbnail img {
     /*object-fit: cover;*/
     object-fit: contain;
-    width: 50vh;
-    border-style: none;
+    width: 90vh;
 }
 
 @media screen and (max-width: 600px) {
     .page {
         background: white;
         color: white;
-    }
-    .grid {
-        margin: 10% 0% 0% 0%;
-    }
-    .thumbnail {
-        width: 100vw;
-    }
-    .grid div {
-        padding: 0% 0% 5% 0%;
-    }
-    .thumbnail img {
-        width: 100vw;
     }
 }
