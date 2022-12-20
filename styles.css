@@ -1,52 +1,65 @@
 body {
-    height: 100vh;
     margin: 0;
     font-family: "Helvetica Neue";
     font-weight: 100;
     color: black;
-    font-size: 3vh;
     text-align: center;
 }
 
-.header {
+#header {
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    align-items :center;
-    font-size: 3vh;
-    font-weight: 400;
+    flex-direction: row;
+    margin: 1% 10% 3% 10%;
+    align-items: center;
+    justify-content: flex-start;
     color: black;
-    /*background-image: url('photos/film/film-06.jpg');*/
+}
+#header h1 {
+    margin-right: 30px;
+    font-size: 2em;
+    letter-spacing: 0em;
+    font-weight: 500;
+}
+#header h2 {
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+#header a {
+    margin-right: 12px;
+    font-size: 0.9em;
+    font-weight: 200
 }
 
-#header_div {
-    width: 100vw;
-    min-height: 100vh;
-    max-height: 100vh;
-    background-image: url('photos/weehawken/weehawken-07.jpg');
-    background-position: 0 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
+#content {
+    display: flex;
 }
-
-.page {
+#arrows {
+     margin-top: 35vh;   
+}
+#arrows button {
+    height: 10px%;
+    width: 100px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+#photos {
     display:flex;
-    width: 100vw;
+    margin: 0% 10% 0% 10%;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    text-align: center;
-    display: none;
-    border-style: none;
 }
-
-#menu_div {
-    display: none;
-    justify-content:flex-end;
+#photos div {
+    margin: 0% 0% 15% 0%;
 }
-#content_div {
+.frame {
     display: flex;
+}
+.frame img {
+    /*object-fit: cover;*/
+    object-fit: contain;
+    width: 100%;
 }
 
 ul {
@@ -62,38 +75,15 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
-.photo_frame {
-    display: flex;
-    border-style:none;
-    border-color: black;
-    padding: 4% 0% 0% 0%;
-}
-
-#photos {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    /*flex-wrap: wrap;*/
-}
-
-#photos div {
-    margin: 5vh;
-}
-
-.thumbnail {
-    display: flex;
-}
-.thumbnail img {
-    /*object-fit: cover;*/
-    object-fit: contain;
-    width: 90vh;
-}
-
 @media screen and (max-width: 600px) {
-    .page {
+    body {
         background: white;
         color: white;
+    }
+    #header {
+        margin: 2% 5% 2% 5%;
+    }
+    #photos {
+        margin: 0% 0% 0% 0%;
     }
 }

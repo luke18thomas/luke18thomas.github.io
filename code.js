@@ -4,13 +4,13 @@ var pick = "";
 
 var files = [];
 
-files.push("photos/weehawken/weehawken-01.jpg");
+files.push("photos/weehawken/weehawken-07.jpg");
 files.push("photos/weehawken/weehawken-02.jpg");
 files.push("photos/weehawken/weehawken-03.jpg");
 files.push("photos/weehawken/weehawken-04.jpg");
 files.push("photos/weehawken/weehawken-05.jpg");
 files.push("photos/weehawken/weehawken-06.jpg");
-files.push("photos/weehawken/weehawken-07.jpg");
+files.push("photos/weehawken/weehawken-01.jpg");
 files.push("photos/weehawken/weehawken-08.jpg");
 files.push("photos/weehawken/weehawken-09.jpg");
 
@@ -20,7 +20,7 @@ loadPhotos("weehawken")
 function changePage(p) {
 
     document.querySelectorAll(".page").forEach((page) => page.style = "display: none")
-    document.querySelectorAll("#" + p + "_div").forEach((page) => page.style = "display: flex");
+    document.querySelectorAll("#" + p).forEach((page) => page.style = "display: flex");
 
     if (p != "menu") { loadPhotos(p) }
 
@@ -42,7 +42,7 @@ function loadPhotos(p) {
             
             let el = document.createElement("div");
             el.innerHTML =
-                    "<div class='thumbnail'> <img src='" + path + "'> </div> ";
+                    "<div class='frame'> <img src='" + path + "'> </div> ";
             document.querySelector("#photos").append(el);
         })
         
