@@ -17,13 +17,13 @@ body {
 }
 #header h1 {
     margin-right: 30px;
-    font-size: 2em;
+    font-size: 1.5em;
     letter-spacing: 0em;
     font-weight: 500;
 }
 #header h2 {
     margin-right: 15px;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 #header a {
     margin-right: 12px;
@@ -33,6 +33,7 @@ body {
 
 #content {
     display: flex;
+    margin: 0% 10% 0% 10%;
 }
 #arrows {
      margin-top: 35vh;   
@@ -46,16 +47,16 @@ body {
 }
 #photos {
     display:flex;
-    margin: 0% 10% 0% 10%;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
 #photos div {
-    margin: 0% 0% 15% 0%;
+    margin: 0% 0% 10% 0%;
 }
 .frame {
     display: flex;
+    max-height: 95vh;
 }
 .frame img {
     /*object-fit: cover;*/
@@ -82,7 +83,7 @@ a:hover, a:active {
         color: white;
     }
     #header {
-        margin: 2% 5% 2% 5%;
+        margin: 2% 3% 2% 3%;
     }
     #content {
         margin: 0% 0% 0% 0%;
