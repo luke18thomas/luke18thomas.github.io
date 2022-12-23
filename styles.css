@@ -40,15 +40,22 @@ body {
     font-size: 1em;
     font-weight: 200;
 }
-#content a {
-    margin: 0% 1% 1% 1%;
-}
-
 #content {
     display: flex;
     flex-direction: column;
     margin: 0% 0% 0% 0%;
 }
+#content a {
+    margin: 0% 1% 1% 1%;
+}
+a:link, a:visited  {
+    text-decoration: none;
+}
+a:hover a:active{
+    text-decoration: underline;
+    text-decoration-thickness: 500;
+}
+
 #arrows {
      margin-top: 35vh;   
 }
@@ -85,15 +92,7 @@ body {
     text-align: left;
 }*/
 
-a:link, a:visited  {
-    text-decoration: none;
-}
-a:hover a:active{
-    text-decoration: underline;
-    text-decoration-thickness: 500;
-}
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 980px) {
     body {
         background: ;
         color: ;

@@ -23,6 +23,7 @@ files.push("photos/film/film-01.jpg");
 files.push("photos/film/film-07.jpg");
 files.push("photos/film/film-08.jpg");
 files.push("photos/film/film-09.jpg");
+files.push("photos/film/film-12.jpg");
 files.push("photos/film/film-10.jpg");
 files.push("photos/film/film-11.jpg");
 
