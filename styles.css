@@ -3,6 +3,7 @@ body {
     font-family: "Helvetica Neue";
     font-weight: 100;
     color: black;
+    background: white;
     text-align: center;
 }
 #header {
@@ -12,7 +13,6 @@ body {
     flex-wrap: wrap;
     align-items: end;
     justify-content: flex-start;
-    color: black;
 }
 #header h1 {
     margin-right: 30px;
@@ -94,7 +94,8 @@ a:hover, a:active {
 
 @media screen and (max-width: 1000px) {
     body {
-        background: white;
+        background: black;
+        color: white;
         font-size: 2em;
         margin: 0%;
     }
