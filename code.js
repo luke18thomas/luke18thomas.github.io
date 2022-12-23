@@ -14,7 +14,19 @@ files.push("photos/weehawken/weehawken-07.jpg");
 files.push("photos/weehawken/weehawken-08.jpg");
 files.push("photos/weehawken/weehawken-09.jpg");
 
-loadPhotos("weehawken")
+files.push("photos/film/film-01.jpg");
+files.push("photos/film/film-02.jpg");
+files.push("photos/film/film-03.jpg");
+files.push("photos/film/film-04.jpg");
+files.push("photos/film/film-05.jpg");
+files.push("photos/film/film-06.jpg");
+files.push("photos/film/film-07.jpg");
+files.push("photos/film/film-08.jpg");
+files.push("photos/film/film-09.jpg");
+files.push("photos/film/film-10.jpg");
+files.push("photos/film/film-11.jpg");
+
+loadPhotos("film")
 
 
 function changePage(p) {
@@ -32,21 +44,25 @@ function loadPhotos(p) {
 
     let numNodes = document.querySelector('#photos').childNodes.length
 
-    if (numNodes != files.length) {
+    /*if (numNodes != files.length) {*/
         
         document.querySelector("#photos").replaceChildren();
         
         files.forEach((path) => {
 
-            let k = Number(path.substring(path.length-6, path.length-4))
+            if (path.indexOf(p) != -1) {
+    
+                let k = Number(path.substring(path.length-6, path.length-4))
             
-            let el = document.createElement("div");
-            el.innerHTML =
-                    "<div class='frame'> <img src='" + path + "'> </div> ";
-            document.querySelector("#photos").append(el);
+                let el = document.createElement("div");
+                el.innerHTML =
+                        "<div class='frame'> <img src='" + path + "'> </div> ";
+                document.querySelector("#photos").append(el);
+
+            }
         })
         
-    }
+    /*}*/
 }
 
 function setTitle() {

@@ -1,15 +1,15 @@
 body {
-    margin: 0% 10% 0% 10%;
+    margin: 0% 12% 0% 12%;
     font-family: "Helvetica Neue";
     font-weight: 100;
     color: black;
     text-align: center;
 }
 #header {
+    margin: 2.5% 0% 1% 0%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 2.5% 0% 1% 0%;
     align-items: center;
     justify-content: flex-start;
     color: black;
