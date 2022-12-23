@@ -1,5 +1,5 @@
 body {
-    margin: 0 5% 0 5%;
+    margin: 0% 10% 0% 10%;
     font-family: "Helvetica Neue";
     font-weight: 100;
     color: black;
@@ -14,16 +14,27 @@ body {
     justify-content: flex-start;
     color: black;
 }
+#header {
+    display: flex;
+    flex-direction: row;
+}
 #header h1 {
     margin-right: 30px;
     font-size: 1.5em;
     letter-spacing: 0em;
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 1.5vw;
 }
 #header h2 {
     font-size: 1em;
     margin-top: 1.5vw;
+}
+#header_right {
+    justify-content: flex-end;
+}
+#header_right img {
+    position: right;
+    scale: 20%;
 }
 #categories {
     display: flex;
@@ -91,8 +102,8 @@ a:hover, a:active {
         font-size: 2em;
         margin: 0%;
     }
-    #content {
-        margin: 0% 0% 0% 0%;
+    #header {
+        justify-content: center;
     }
     #categories {
         display: flex;
