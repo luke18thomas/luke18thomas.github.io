@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 3% 10% 3% 10%;
+    margin: 3% 10% 1% 10%;
     align-items: center;
     justify-content: flex-start;
     color: black;
@@ -25,14 +25,22 @@ body {
     margin-right: 15px;
     font-size: 1em;
 }
-#header a {
-    margin-right: 12px;
+#categories {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 2%;
+}
+#content a {
+    margin: 0% 1% 1% 1%;
+    
     font-size: 0.9em;
     font-weight: 200
 }
 
 #content {
     display: flex;
+    flex-direction: column;
     margin: 0% 10% 0% 10%;
 }
 #arrows {
@@ -52,15 +60,18 @@ body {
     justify-content: flex-start;
 }
 #photos div {
-    margin: 0% 0% 7% 0%;
+    margin: 0% 0% 10% 0%;
 }
 .frame {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .frame img {
     /*object-fit: cover;*/
     object-fit: contain;
     width: 100%;
+    height: 100%
 }
 
 /*ul {
@@ -79,8 +90,7 @@ a:hover, a:active {
 @media screen and (max-width: 1000px) {
     body {
         background: white;
-        color: white;
-        font-size: 1.5em;
+        font-size: 2em;
     }
     #header {
         margin: 2% 3% 2% 3%;
@@ -88,10 +98,19 @@ a:hover, a:active {
     #content {
         margin: 0% 0% 0% 0%;
     }
+    #categories {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8%;
+        font-size: 3em;
+    }
+    #content a {
+        margin-bottom: 3%;
+    }
     #photos {
         margin: 0% 0% 0% 0%;
     }
     #photos div {
-    margin: 0% 0% 25% 0%;
+    margin: 0% 0% 15% 0%;
 }
 }
