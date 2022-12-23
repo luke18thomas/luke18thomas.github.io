@@ -53,27 +53,27 @@ function changePage(p) {
 
 function loadPhotos(p) {
 
-    let numNodes = document.querySelector('#photos').childNodes.length
-
-    /*if (numNodes != files.length) {*/
-        
-        document.querySelector("#photos").replaceChildren();
-        
-        files.forEach((path) => {
-
-            if (path.indexOf(p) != -1) {
+    document.querySelectorAll(".category").forEach((el) => el.style.fontWeight = 200)
+    document.querySelector("#" + p).style.fontWeight = 600
     
-                let k = Number(path.substring(path.length-6, path.length-4))
+    let numNodes = document.querySelector('#photos').childNodes.length;
+        
+    document.querySelector("#photos").replaceChildren();
+        
+    files.forEach((path) => {
+
+        if (path.indexOf(p) != -1) {
             
-                let el = document.createElement("div");
-                el.innerHTML =
-                        "<div class='frame'> <img src='" + path + "'> </div> ";
-                document.querySelector("#photos").append(el);
+            let k = Number(path.substring(path.length-6, path.length-4))
+            
+            let el = document.createElement("div");
+            el.innerHTML = "<div class='frame'> <img src='" + path + "'> </div> ";
+            
+            document.querySelector("#photos").append(el);
 
             }
         })
-        
-    /*}*/
+
 }
 
 function setTitle() {
