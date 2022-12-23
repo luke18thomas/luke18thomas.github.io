@@ -42,7 +42,7 @@ loadPhotos("weehawken")
 
 function changePage(p) {
 
-    document.querySelectorAll(".page").forEach((page) => page.style = "display: none")
+    document.querySelectorAll(".page").forEach((page) => page.style = "display: none");
     document.querySelectorAll("#" + p).forEach((page) => page.style = "display: flex");
 
     if (p != "menu") { loadPhotos(p) }
@@ -52,9 +52,9 @@ function changePage(p) {
 }
 
 function loadPhotos(p) {
-
-    document.querySelectorAll(".category").forEach((el) => el.style.fontWeight = 200)
-    document.querySelector("#" + p).style.fontWeight = 600
+    
+    document.querySelectorAll(".category").forEach((el) => el.style.fontWeight = 200);
+    document.querySelector("#" + p).style.fontWeight = 600;
     
     let numNodes = document.querySelector('#photos').childNodes.length;
         
