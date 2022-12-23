@@ -26,6 +26,17 @@ files.push("photos/film/film-09.jpg");
 files.push("photos/film/film-10.jpg");
 files.push("photos/film/film-11.jpg");
 
+files.push("photos/california/california-01.jpg");
+files.push("photos/california/california-02.jpg");
+files.push("photos/california/california-03.jpg");
+files.push("photos/california/california-04.jpg");
+files.push("photos/california/california-05.jpg");
+files.push("photos/california/california-06.jpg");
+files.push("photos/california/california-07.jpg");
+files.push("photos/california/california-08.jpg");
+files.push("photos/california/california-09.jpg");
+
+
 loadPhotos("weehawken")
 
 
