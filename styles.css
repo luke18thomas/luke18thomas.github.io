@@ -10,13 +10,9 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: end;
     justify-content: flex-start;
     color: black;
-}
-#header {
-    display: flex;
-    flex-direction: row;
 }
 #header h1 {
     margin-right: 30px;
@@ -27,7 +23,7 @@ body {
 }
 #header h2 {
     font-size: 1em;
-    margin-top: 1.5vw;
+    margin-bottom: 1.15em;
 }
 #header_right {
     justify-content: flex-end;
