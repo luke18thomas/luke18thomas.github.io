@@ -74,6 +74,7 @@ a:hover a:active{
 }
 #photos div {
     margin: 0% 0% 10% 0%;
+    max-height: 90vh;
 }
 .frame {
     display: flex;

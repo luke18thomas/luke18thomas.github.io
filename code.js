@@ -15,17 +15,17 @@ files.push("photos/weehawken/weehawken-08.jpg");
 files.push("photos/weehawken/weehawken-09.jpg");
 
 files.push("photos/film/film-06.jpg");
-files.push("photos/film/film-02.jpg");
 files.push("photos/film/film-03.jpg");
 files.push("photos/film/film-04.jpg");
 /*files.push("photos/film/film-05.jpg");*/
-files.push("photos/film/film-01.jpg");
 files.push("photos/film/film-07.jpg");
 files.push("photos/film/film-08.jpg");
 files.push("photos/film/film-09.jpg");
 files.push("photos/film/film-12.jpg");
 files.push("photos/film/film-10.jpg");
 files.push("photos/film/film-11.jpg");
+files.push("photos/film/film-02.jpg");
+files.push("photos/film/film-01.jpg");
 
 files.push("photos/california/california-01.jpg");
 files.push("photos/california/california-02.jpg");
@@ -38,7 +38,7 @@ files.push("photos/california/california-08.jpg");
 files.push("photos/california/california-09.jpg");
 
 
-loadPhotos("weehawken")
+loadPhotos("film")
 
 
 function changePage(p) {
