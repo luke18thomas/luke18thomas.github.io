@@ -9,39 +9,33 @@ body {
     background: white;
     text-align: center;
 }
-#header {
+.header {
     margin: 0% 0% 1% 0%;
     display: flex;
     align-items: stretch;
     flex-direction: row;
 }
-#header_left {
-    margin: 0% 0% 1% 0%;
-    display: flex;
+.header #header_left {
     flex-direction: row;
     justify-content: flex-start;
     align-items: baseline;
 }
-#header_right {
-    display: flex;
-    width: 100%;
+.header #header_right {
     flex-direction: row;
+    width: 100%;
     justify-content: flex-end;
     align-items: center;
 }
-#header img {
+.header #instagram_link {
     width: 2em;
 }
-#header_left h1{
-    padding: 0;
-}
-#h1_name {
+.header #h1_name {
     margin-right: 20px;
     font-size: 1.5em;
     letter-spacing: 0em;
     font-weight: 300;
 }
-#h1_photos {
+.header #h1_photos {
     font-size: 1em;
     font-weight: 600;
 }
@@ -114,7 +108,7 @@ a:hover a:active{
         margin: 3% 0% 0% 0%;
     }
     #header {
-        margin: 0% 4% 0% 4%;
+        margin: 0% 5% 0% 5%;
     }
     #categories {
         display: flex;
