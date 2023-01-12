@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0% 14% 0% 14%;
+    margin: 0% 15% 0% 15%;
     font-family: "Helvetica Neue";
     font-weight: 100;
     color: black;
@@ -27,7 +27,7 @@ body {
     align-items: center;
 }
 .header #instagram_link {
-    width: 2em;
+    width: 1.5em;
 }
 .header #h1_name {
     margin-right: 20px;
@@ -54,28 +54,18 @@ body {
     flex-direction: column;
     margin: 0% 0% 0% 0%;
 }
-#content a {
+a {
     margin: 0% 1% 1% 1%;
 }
 a:link, a:visited  {
-    text-decoration: none;
+    /*text-decoration: none;*/
     color: black;
 }
 a:hover a:active{
     text-decoration: underline;
-    text-decoration-thickness: 500;
+    /*text-decoration-thickness: 500;*/
 }
 
-#arrows {
-     margin-top: 35vh;   
-}
-#arrows button {
-    height: 10px%;
-    width: 100px;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-}
 #photos {
     display:flex;
     flex-direction: column;
@@ -86,19 +76,13 @@ a:hover a:active{
     margin: 0% 0% 8% 0%;
     
 }
-.frame {}
 .frame img {
     /*object-fit: cover;*/
     object-fit: contain;
     width: 100%;
-    max-height: 120vh;
+    max-height: 110vh;
+    max-width: 130vh;
 }
-
-/*ul {
-    list-style-type: none;
-    line-height: 70px;
-    text-align: left;
-}*/
 
 @media screen and (max-width: 980px) {
     body {

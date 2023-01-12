@@ -54,8 +54,8 @@ function changePage(p) {
 
 function loadPhotos(p) {
     
-    document.querySelectorAll(".category").forEach((el) => el.style.fontWeight = 200);
-    document.querySelector("#" + p).style.fontWeight = 600;
+    /*document.querySelectorAll(".category").forEach((el) => el.style.fontWeight = 200);*/
+    /*document.querySelector("#" + p).style.fontWeight = 600;*/
     
     let numNodes = document.querySelector('#photos').childNodes.length;
         
