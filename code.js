@@ -37,6 +37,20 @@ files.push("photos/california/california-03.jpg");
 files.push("photos/california/california-08.jpg");
 /*files.push("photos/california/california-07.jpg");*/
 
+files.push("photos/newyork/newyork-01.jpg");
+files.push("photos/newyork/newyork-02.jpg");
+files.push("photos/newyork/newyork-03.jpg");
+files.push("photos/newyork/newyork-04.jpg");
+files.push("photos/newyork/newyork-05.jpg");
+files.push("photos/newyork/newyork-06.jpg");
+files.push("photos/newyork/newyork-07.jpg");
+files.push("photos/newyork/newyork-08.jpg");
+files.push("photos/newyork/newyork-09.jpg");
+files.push("photos/newyork/newyork-10.jpg");
+files.push("photos/newyork/newyork-11.jpg");
+files.push("photos/newyork/newyork-12.jpg");
+files.push("photos/newyork/newyork-13.jpg");
+
 
 loadPhotos("film")
 
