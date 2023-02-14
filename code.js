@@ -4,15 +4,18 @@ var pick = "";
 
 var files = [];
 
-files.push("photos/weehawken/weehawken-03.jpg");
-files.push("photos/weehawken/weehawken-02.jpg");
-files.push("photos/weehawken/weehawken-01.jpg");
-files.push("photos/weehawken/weehawken-04.jpg");
-files.push("photos/weehawken/weehawken-05.jpg");
-files.push("photos/weehawken/weehawken-06.jpg");
-files.push("photos/weehawken/weehawken-07.jpg");
-files.push("photos/weehawken/weehawken-08.jpg");
-files.push("photos/weehawken/weehawken-09.jpg");
+files.push("photos/digital/digital-01.jpeg");
+files.push("photos/digital/digital-02.jpeg");
+files.push("photos/digital/digital-03.jpeg");
+files.push("photos/digital/digital-04.jpeg");
+files.push("photos/digital/digital-05.jpeg");
+files.push("photos/digital/digital-06.jpeg");
+files.push("photos/digital/digital-07.jpeg");
+files.push("photos/digital/digital-08.jpeg");
+files.push("photos/digital/digital-09.jpeg");
+files.push("photos/digital/digital-10.jpeg");
+files.push("photos/digital/digital-11.jpeg");
+files.push("photos/digital/digital-12.jpeg");
 
 files.push("photos/film/film-06.jpg");
 files.push("photos/film/film-03.jpg");
@@ -27,32 +30,7 @@ files.push("photos/film/film-11.jpg");
 files.push("photos/film/film-02.jpg");
 files.push("photos/film/film-01.jpg");
 
-files.push("photos/california/california-09.jpg");
-files.push("photos/california/california-02.jpg");
-files.push("photos/california/california-04.jpg");
-files.push("photos/california/california-05.jpg");
-files.push("photos/california/california-06.jpg");
-files.push("photos/california/california-01.jpg");
-files.push("photos/california/california-03.jpg");
-files.push("photos/california/california-08.jpg");
-/*files.push("photos/california/california-07.jpg");*/
-
-files.push("photos/newyork/newyork-01.jpg");
-files.push("photos/newyork/newyork-02.jpg");
-files.push("photos/newyork/newyork-03.jpg");
-files.push("photos/newyork/newyork-04.jpg");
-files.push("photos/newyork/newyork-05.jpg");
-files.push("photos/newyork/newyork-06.jpg");
-files.push("photos/newyork/newyork-07.jpg");
-files.push("photos/newyork/newyork-08.jpg");
-files.push("photos/newyork/newyork-09.jpg");
-files.push("photos/newyork/newyork-10.jpg");
-files.push("photos/newyork/newyork-11.jpg");
-files.push("photos/newyork/newyork-12.jpg");
-files.push("photos/newyork/newyork-13.jpg");
-
-
-loadPhotos("film")
+loadPhotos("digital")
 
 
 function changePage(p) {
@@ -76,6 +54,8 @@ function loadPhotos(p) {
     document.querySelector("#photos").replaceChildren();
         
     files.forEach((path) => {
+
+        console.log(path)
 
         if (path.indexOf(p) != -1) {
             
