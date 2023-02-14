@@ -4,18 +4,12 @@ var pick = "";
 
 var files = [];
 
-files.push("photos/digital/digital-01.jpeg");
-files.push("photos/digital/digital-02.jpeg");
-files.push("photos/digital/digital-03.jpeg");
-files.push("photos/digital/digital-04.jpeg");
-files.push("photos/digital/digital-05.jpeg");
-files.push("photos/digital/digital-06.jpeg");
-files.push("photos/digital/digital-07.jpeg");
-files.push("photos/digital/digital-08.jpeg");
-files.push("photos/digital/digital-09.jpeg");
-files.push("photos/digital/digital-10.jpeg");
-files.push("photos/digital/digital-11.jpeg");
-files.push("photos/digital/digital-12.jpeg");
+k = 0
+
+for (k = 0; k < 40; k++) {
+    files.push("photos/digital/digital - " + (k+1) + ".jpeg")
+}
+
 
 files.push("photos/film/film-06.jpg");
 files.push("photos/film/film-03.jpg");
