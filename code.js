@@ -27,6 +27,19 @@ files.push("photos/film/film-01.jpg");
 loadPhotos("digital")
 
 
+function switchMode() {
+
+    if (document.querySelector('body').style.backgroundColor != 'black') {
+        
+        document.querySelector('body').style.backgroundColor = 'black'
+        document.querySelector('body').style.color = 'white'
+    }
+    else {
+        document.querySelector('body').style.backgroundColor = 'white'
+        document.querySelector('body').style.color = 'black'
+    }
+}
+
 function changePage(p) {
 
     document.querySelectorAll(".page").forEach((page) => page.style = "display: none");
@@ -49,7 +62,7 @@ function loadPhotos(p) {
         
     files.forEach((path) => {
 
-        console.log(path)
+        /*console.log(path)*/
 
         if (path.indexOf(p) != -1) {
             
