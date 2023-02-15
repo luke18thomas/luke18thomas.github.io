@@ -5,8 +5,8 @@ body {
     margin: 0% 15% 0% 15%;
     font-family: "Helvetica Neue";
     font-weight: 100;
-    color: black;
-    background: white;
+    color: white;
+    background: black;
     text-align: center;
 }
 .header {
