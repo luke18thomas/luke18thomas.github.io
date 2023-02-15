@@ -4,10 +4,10 @@ var pick = "";
 
 var files = [];
 
-k = 0
+var k = 0
 
-for (k = 0; k < 40; k++) {
-    files.push("photos/digital/digital - " + (k+1) + ".jpeg")
+for (k = 41; k > 0; k--) {
+    files.push("photos/digital/digital - " + k + ".jpeg")
 }
 
 
