@@ -33,13 +33,13 @@ body {
     width: 1.5em;
 }
 .header #h1_name {
-    margin-right: 20px;
+    margin-right: 0px;
     font-size: 1.5em;
     letter-spacing: 0em;
     font-weight: 300;
 }
 .header #h1_photos {
-    font-size: 1em;
+    font-size: 1.6em;
     font-weight: 600;
 }
 #categories {
@@ -61,12 +61,12 @@ a {
     margin: 0% 1% 1% 1%;
 }
 a:link, a:visited  {
-    /*text-decoration: none;*/
+    text-decoration: underline;
     color: black;
 }
 a:hover a:active{
     text-decoration: underline;
-    /*text-decoration-thickness: 500;*/
+    text-decoration-thickness: 500;
 }
 
 #photos {
