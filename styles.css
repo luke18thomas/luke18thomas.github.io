@@ -29,6 +29,9 @@ body {
 .header #instagram_link {
     width: 1.5em;
 }
+.header #mode_switch {
+    width: 1.5em;
+}
 .header #h1_name {
     margin-right: 20px;
     font-size: 1.5em;
