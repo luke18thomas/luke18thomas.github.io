@@ -31,6 +31,7 @@ body {
 }
 .header #mode_switch {
     width: 1.5em;
+    margin-right: 1em%;
 }
 .header #h1_name {
     margin-right: 0px;
