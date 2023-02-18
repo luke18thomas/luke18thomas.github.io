@@ -6,7 +6,7 @@ var files = [];
 
 var k = 0
 
-for (k = 41; k > 0; k--) {
+for (k = 43; k > 0; k--) {
     files.push("photos/digital/digital - " + k + ".jpeg")
 }
 
