@@ -59,15 +59,16 @@ body {
     margin: 0% 0% 0% 0%;
 }
 a {
-    margin: 0% 1% 1% 1%;
+    margin: 0% 1% 1% 0%;
 }
-a:link, a:visited  {
-    text-decoration: underline;
-    color: black;
+a #mode_switch {
+    padding-right: 5%;
 }
-a:hover a:active{
+ {
+   margin-right: 5%; 
+}
+#categories a:hover { /* a:link a:visited a:hover a:active */
     text-decoration: underline;
-    text-decoration-thickness: 500;
 }
 
 #photos {
