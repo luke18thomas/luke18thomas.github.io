@@ -1,15 +1,12 @@
 var i = 0;
-
-var pick = "";
+var k = 0;
 
 var files = [];
 
-var k = 0
 
-for (k = 43; k > 0; k--) {
+for (k = 45; k > 0; k--) {
     files.push("photos/digital/digital - " + k + ".jpeg")
 }
-
 
 files.push("photos/film/film-06.jpg");
 files.push("photos/film/film-03.jpg");
@@ -27,7 +24,7 @@ files.push("photos/film/film-01.jpg");
 loadPhotos("digital")
 
 
-function switchMode() {
+function toggleDarkMode() {
 
     if (document.querySelector('body').style.backgroundColor != 'black') {
         
@@ -61,7 +58,7 @@ function loadPhotos(p) {
     /*document.querySelectorAll(".category").forEach((el) => el.style.fontWeight = 200);*/
     /*document.querySelector("#" + p).style.fontWeight = 600;*/
     
-    let numNodes = document.querySelector('#photos').childNodes.length;
+    /*let numNodes = document.querySelector('#photos').childNodes.length;*/
         
     document.querySelector("#photos").replaceChildren();
         
@@ -107,13 +104,14 @@ function changePhoto(dir, source) {
     
 }
 
-
+/*
 document.addEventListener('keypress', function(e) {
 
     var code = e.which || e.keyCode;
     if (code == '44') changePhoto('left')
     if (code == '46') changePhoto('right')
 })
+*/
 
 /*
 document.getElementById('photo').addEventListener("click", function(e) {

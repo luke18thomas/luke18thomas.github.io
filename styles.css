@@ -68,9 +68,9 @@ a #mode_switch {
    margin-right: 5%; 
 }
 #categories a:hover { /* a:link a:visited a:hover a:active */
-    text-decoration: underline;
+    text-decoration: none;
 }
-
+/* big photos */
 #photos {
     display:flex;
     flex-direction: column;
@@ -88,6 +88,25 @@ a #mode_switch {
     max-height: 110vh;
     max-width: 130vh;
 }
+/**/
+
+/* photo grid
+#photos {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#photos div {
+    margin: 4% 0% 4% 0%;
+    
+}
+.frame img {
+    object-fit: contain;
+    width: 15vw;
+    height: 15vw;
+}
+*/
+
 
 @media screen and (max-width: 980px) {
     body {
