@@ -123,3 +123,8 @@ document.getElementById('photo').addEventListener("click", function(e) {
     else changePhoto('right')
 })
 */
+
+document.addEventListener('scroll', function(e) {
+    console.log(Math.round(window.scrollY))
+    document.getElementById("header").style.opacity = 1/(Math.round(window.scrollY)/50)
+})
