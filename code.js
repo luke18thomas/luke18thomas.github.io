@@ -4,9 +4,11 @@ var k = 0;
 var files = [];
 
 
-for (k = 45; k > 0; k--) {
-    files.push("photos/digital/digital - " + k + ".jpeg")
+for (k = 0; k < 55; k++) {
+    /*files.push("photos/digital/digital 0.jpg")*/
+    files.push("photos/digital/digital " + k + ".jpg")
 }
+
 
 files.push("photos/film/film-06.jpg");
 files.push("photos/film/film-03.jpg");
@@ -123,8 +125,3 @@ document.getElementById('photo').addEventListener("click", function(e) {
     else changePhoto('right')
 })
 */
-
-document.addEventListener('scroll', function(e) {
-    console.log(Math.round(window.scrollY))
-    document.getElementById("header").style.opacity = 1/(Math.round(window.scrollY)/50)
-})
