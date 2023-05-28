@@ -5,8 +5,10 @@ var files = [];
 
 
 for (k = 1; k <= 43; k++) {
+    if (k != 2) {
     /*files.push("photos/digital/digital 0.jpg")*/
-    files.push("photos/fuji/fuji" + k + ".jpg")
+        files.push("photos/fuji/fuji" + k + ".jpg")
+    }
 }
 
 
