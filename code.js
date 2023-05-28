@@ -4,9 +4,9 @@ var k = 0;
 var files = [];
 
 
-for (k = 0; k < 55; k++) {
+for (k = 1; k <= 43; k++) {
     /*files.push("photos/digital/digital 0.jpg")*/
-    files.push("photos/digital/digital " + k + ".jpg")
+    files.push("photos/fuji/fuji" + k + ".jpg")
 }
 
 
@@ -23,7 +23,7 @@ files.push("photos/film/film-11.jpg");
 files.push("photos/film/film-02.jpg");
 files.push("photos/film/film-01.jpg");
 
-loadPhotos("digital")
+loadPhotos("fuji")
 
 
 function toggleDarkMode() {
@@ -71,6 +71,8 @@ function loadPhotos(p) {
         if (path.indexOf(p) != -1) {
             
             let k = Number(path.substring(path.length-6, path.length-4))
+
+            console.log(k)
             
             let el = document.createElement("div");
             el.innerHTML = "<div class='frame'> <img src='" + path + "'> </div> ";
