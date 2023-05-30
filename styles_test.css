@@ -1,0 +1,153 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0% 15% 0% 15%;
+    font-family: "Helvetica Neue";
+    font-weight: 100;
+    color: rgb(40,40,40);
+    background: rgb(240,240,240);
+    text-align: center;
+}
+.header {
+    margin: 0% 0% 1% 0%;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    /*background: white;*/
+    /*position: -webkit-sticky;*/
+    /*position: sticky;*/
+    top: 0;
+}
+.header #header_left {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.header #header_right {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header #instagram_link {
+    width: 1.5em;
+}
+.header #mode_switch {
+    width: 1.5em;
+    margin-right: 1em%;
+}
+.header #h1_name {
+    margin-right: 0px;
+    font-size: 1.5em;
+    letter-spacing: 0em;
+    font-weight: 300;
+}
+.header #h1_photos {
+    font-size: 1.6em;
+    font-weight: 600;
+}
+#categories {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 2%;
+    /*font-family: 'Courier New';*/
+    font-size: 1em;
+    font-weight: 200;
+    letter-spacing: 0.025em;
+}
+#content { 
+    display: flex;
+    flex-direction: column;
+    margin: 0% 0% 0% 0%;
+}
+a {
+    margin: 0% 2% 1% 0%;
+}
+a #mode_switch {
+    padding-right: 5%;
+}
+ {
+   margin-right: 5%; 
+}
+#categories a:hover { /* a:link a:visited a:hover a:active */
+    text-decoration: none;
+}
+/* big photos */
+#photos {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#photos div {
+    width:30vh;
+    height:30vh;
+}
+.frame div {
+    justify-content: center;
+    justify-items: center;
+}
+.frame img {
+    /*object-fit: cover;*/
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    max-height: 20vh;
+    max-width: 20vh;
+    justify-content: center;
+    justify-items: center;
+}
+/**/
+
+/* photo grid
+#photos {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#photos div {
+    margin: 4% 0% 4% 0%;
+    
+}
+.frame img {
+    object-fit: contain;
+    width: 15vw;
+    height: 15vw;
+}
+*/
+
+
+@media screen and (max-width: 980px) {
+    body {
+        background: ;
+        color: ;
+        font-size: 2em;
+        margin: 3% 0% 0% 0%;
+    }
+    #header {
+        margin: 0% 5% 0% 5%;
+        font-size: 0.6em;
+    }
+    #categories {
+        display: flex;
+        flex-direction: column;
+        margin: 8% 0% 8% 0%;
+        font-size: 1.7em;
+        font-weight: 200;
+    }
+    #content a {
+        margin-bottom: 3%;
+    }
+    #photos {
+        margin: 0% 0% 0% 0%;
+    }
+    #photos div {
+        margin: 0% 0% 15% 0%;
+    }
+    .frame img {
+        max-height: 100%;
+    }
+}
