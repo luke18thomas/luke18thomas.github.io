@@ -93,10 +93,8 @@ a #mode_switch {
 .frame img {
     /*object-fit: cover;*/
     object-fit: contain;
-    width: 100%;
-    height: 100%;
-    max-height: 20vh;
-    max-width: 20vh;
+    width: 80%;
+    height: 80%;
     justify-content: center;
     justify-items: center;
 }
@@ -145,7 +143,7 @@ a #mode_switch {
         margin: 0% 0% 0% 0%;
     }
     #photos div {
-        margin: 0% 0% 15% 0%;
+        margin: 0% 0% 0% 0%;
     }
     .frame img {
         max-height: 100%;
