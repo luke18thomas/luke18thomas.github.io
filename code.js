@@ -1,5 +1,6 @@
 var i = 0;
 var k = 0;
+var dark = false;
 
 var files = [];
 
@@ -30,19 +31,20 @@ loadPhotos("fuji")
 
 function toggleDarkMode() {
 
-    if (document.querySelector('body').style.backgroundColor != 'black') {
+    if (!dark) {
         
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'rgb(225,225,225)';
+        document.querySelector('body').style.backgroundColor = 'rgb(20,20,20)';
+        document.querySelector('body').style.color = 'rgb(240,240,240)';
         document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta", "insta_white");
         document.querySelector('#mode_switch').src = document.querySelector('#mode_switch').src.replace("dark_mode", "dark_mode_white");
+        dark = true;
     }
     else {
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
+        document.querySelector('body').style.backgroundColor = 'rgb(240,240,240)';
+        document.querySelector('body').style.color = 'rgb(40,40,40)';
         document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta_white", "insta");
         document.querySelector('#mode_switch').src = document.querySelector('#mode_switch').src.replace("dark_mode_white", "dark_mode");
-
+        dark = false;
     }
 }
 
