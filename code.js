@@ -54,7 +54,7 @@ function changeView(id) {
     if (state == 'grid') {
 
         document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: contain');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.height = '100vw');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.height = 'auto');
         document.querySelectorAll('#photos div').forEach((x) => x.style.width = '100vw');
 
         state = 'scroll'
