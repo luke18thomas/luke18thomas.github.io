@@ -59,12 +59,6 @@ function changeView(id) {
 
         state = 'scroll'
 
-        document.querySelectorAll('#' + id)[0].scrollIntoView({
-            behavior: 'auto',
-            block: 'center',
-            inline: 'center'
-        });
-
     }
 
     else if (state == 'scroll') {
@@ -75,13 +69,13 @@ function changeView(id) {
 
         state = 'grid'
 
-        document.querySelectorAll('#' + id)[0].scrollIntoView({
-            behavior: 'smooth',
+    }
+
+    document.querySelectorAll('#' + id)[0].scrollIntoView({
+            behavior: 'auto', /*smooth*/
             block: 'center',
             inline: 'center'
-        });
-
-    }
+    });
         
 }
 
