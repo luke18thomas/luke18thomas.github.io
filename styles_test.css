@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0% 15% 0% 15%;
+    margin: 0% 2% 0% 2%;
     font-family: "Helvetica Neue";
     font-weight: 100;
     color: rgb(20,20,20);
@@ -74,7 +74,7 @@ a #mode_switch {
 #categories a:hover { /* a:link a:visited a:hover a:active */
     text-decoration: none;
 }
-/* big photos */
+
 #photos {
     display:flex;
     flex-direction: row;
@@ -83,40 +83,22 @@ a #mode_switch {
     flex-wrap: wrap;
 }
 #photos div {
-    width:25vh;
-    height:25vh;
+    width:20vh;
+    height:20vh;
+    /*padding: 1vh;*/
 }
 .frame div {
     justify-content: center;
     justify-items: center;
 }
 .frame img {
-    /*object-fit: cover;*/
-    object-fit: contain;
-    width: 80%;
-    height: 80%;
+    object-fit: cover;
+    /*object-fit: contain;*/
+    width: 90%;
+    height: 90%;
     justify-content: center;
     justify-items: center;
 }
-/**/
-
-/* photo grid
-#photos {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-#photos div {
-    margin: 4% 0% 4% 0%;
-    
-}
-.frame img {
-    object-fit: contain;
-    width: 15vw;
-    height: 15vw;
-}
-*/
-
 
 @media screen and (max-width: 980px) {
     body {
@@ -135,17 +117,4 @@ a #mode_switch {
         margin: 8% 0% 8% 0%;
         font-size: 1.7em;
         font-weight: 200;
-    }
-    #content a {
-        margin-bottom: 3%;
-    }
-    #photos {
-        margin: 0% 0% 0% 0%;
-    }
-    #photos div {
-        margin: 0% 0% 0% 0%;
-    }
-    .frame img {
-        max-height: 100%;
-    }
 }

@@ -1,8 +1,8 @@
-var i = 0;
-var k = 0;
-var dark = false;
+let i = 0;
+let k = 0;
+let dark = false;
 
-var files = [];
+let files = [];
 
 
 for (k = 1; k <= 43; k++) {
@@ -79,7 +79,7 @@ function loadPhotos(p) {
             console.log(k)
             
             let el = document.createElement("div");
-            el.innerHTML = "<div class='frame'> <img src='" + path + "'> </div> ";
+            el.innerHTML = "<div class='frame' id='" + p + k + "'> <img src='" + path + "'> </div> ";
             
             document.querySelector("#photos").append(el);
 
