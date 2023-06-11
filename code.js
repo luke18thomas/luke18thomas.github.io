@@ -59,6 +59,9 @@ function changeView(id) {
 
         state = 'scroll'
 
+        /* save current scroll state to return to */
+        /* if the scroll view picture is still within view */
+
     }
 
     else if (state == 'scroll') {

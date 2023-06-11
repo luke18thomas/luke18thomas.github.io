@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 .header {
-    margin: 0% 0% 1% 0%;
+    margin: 0% 0% 5% 0%;
     display: flex;
     align-items: stretch;
     flex-direction: row;
@@ -32,10 +32,11 @@ body {
 }
 .header #instagram_link {
     width: 1.5em;
+    margin-right: 0.25em;
 }
 .header #mode_switch {
     width: 1.5em;
-    margin-right: 1em%;
+    margin-right: 0%;
 }
 .header #h1_name {
     margin-right: 0px;
@@ -71,8 +72,8 @@ a #mode_switch {
  {
    margin-right: 5%; 
 }
-#categories a:hover { /* a:link a:visited a:hover a:active */
-    text-decoration: none;
+#categories a:active { /* a:link a:visited a:hover a:active */
+    text-decoration: underline;
 }
 
 #photos {
@@ -97,23 +98,35 @@ a #mode_switch {
     height: 90%;
     justify-content: center;
     justify-items: center;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 980px) {
     body {
         background: ;
-        color: ;
-        font-size: 2em;
+        font-size: 1em;
         margin: 3% 0% 0% 0%;
     }
     #header {
         margin: 0% 5% 0% 5%;
+    }
+    .header #header_left {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
         font-size: 0.6em;
+    }
+    .header #header_right {
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 1em;
     }
     #categories {
         display: flex;
         flex-direction: column;
-        margin: 8% 0% 8% 0%;
-        font-size: 1.7em;
-        font-weight: 200;
+        margin: 0% 0% 8% 0%;
+        font-size: 2em;
+        font-weight: 300;
 }
