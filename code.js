@@ -6,10 +6,14 @@ let state = 'grid';
 let files = [];
 
 
-for (k = 1; k <= 43; k++) {
+for (k = 44; k <= 102; k++) {
     if (k != 2) {
     /*files.push("photos/digital/digital 0.jpg")*/
-        files.push("photos/fuji/fuji" + k + ".jpg")
+
+        let n = '000' + k;
+        n = n.substring(n.length - 3, n.length);
+        
+        files.push("photos/fuji/fuji" + n + ".jpg")
     }
 }
 
@@ -98,7 +102,7 @@ function loadPhotos(p) {
         if (path.indexOf(p) != -1) {
 
             /* in future make file name numbers like 00N */
-            let k = Number(path.substring(path.length-6, path.length-4).replace('i','0'))
+            let k = Number(path.substring(path.length-7, path.length-4))
             let id = p + k
 
             /*console.log(path)
