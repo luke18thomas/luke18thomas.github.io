@@ -51,14 +51,11 @@ function toggleDarkMode() {
 
 function changeView(id) {
 
-    console.log(id);
-    console.log(state);
-
     if (state == 'grid') {
 
         document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: contain');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.height = '90vh');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.width = '90vh');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.height = '100vw');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.width = '100vw');
 
         state = 'scroll'
 
@@ -67,13 +64,13 @@ function changeView(id) {
     else if (state == 'scroll') {
         
         document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: cover');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.height = '25vh');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.width = '25vh');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.height = '30vw');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.width = '30vw');
 
         state = 'grid'
 
     }
-    document.querySelectorAll('#' + id)[0].scrollIntoView();
+    document.querySelectorAll('#' + id)[0].scrollIntoView('{behavior: smooth}');
         
 }
 

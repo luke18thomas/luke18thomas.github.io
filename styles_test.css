@@ -81,10 +81,11 @@ a #mode_switch {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    scroll-behavior: smooth;
 }
 #photos div {
-    width:30vh;
-    height:30vh;
+    width:30vw;
+    height:30vw;
 }
 .frame div {
     justify-content: center;
