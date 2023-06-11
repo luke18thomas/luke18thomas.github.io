@@ -1,6 +1,7 @@
 let i = 0;
 let k = 0;
 let dark = false;
+let state = 'grid';
 
 let files = [];
 
@@ -48,14 +49,32 @@ function toggleDarkMode() {
     }
 }
 
-function changePage(p) {
+function changeView(id) {
 
-    document.querySelectorAll(".page").forEach((page) => page.style = "display: none");
-    document.querySelectorAll("#" + p).forEach((page) => page.style = "display: flex");
+    console.log(id);
+    console.log(state);
 
-    if (p != "menu") { loadPhotos(p) }
+    if (state == 'grid') {
 
-    /*document.querySelector(".page").scrollTo(0,0)*/
+        document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: contain');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.height = '90vh');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.width = '90vh');
+
+        state = 'scroll'
+
+    }
+
+    else if (state == 'scroll') {
+        
+        document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: cover');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.height = '25vh');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.width = '25vh');
+
+        state = 'grid'
+
+    }
+        
+    document.querySelectorAll('#' + id)[0].scrollIntoView();
         
 }
 
@@ -73,13 +92,20 @@ function loadPhotos(p) {
         /*console.log(path)*/
 
         if (path.indexOf(p) != -1) {
-            
-            let k = Number(path.substring(path.length-6, path.length-4))
 
-            console.log(k)
+            /* in future make file name numbers like 00N */
+            let k = Number(path.substring(path.length-6, path.length-4).replace('i','0'))
+            let id = p + k
+
+            /*console.log(path)
+            console.log(k)*/
             
             let el = document.createElement("div");
-            el.innerHTML = "<div class='frame' id='" + p + k + "'> <img src='" + path + "'> </div> ";
+            el.innerHTML = "<div class='frame' id='" + id + "'> <img src='" + path + "'> </div> ";
+
+            el.innerHTML = "<div class='frame' id='" + id + "' onClick = changeView('" + id + "')> <img src='" + path + "'> </div> ";
+
+            console.log(el.innerHTML)
             
             document.querySelector("#photos").append(el);
 
