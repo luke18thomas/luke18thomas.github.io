@@ -73,7 +73,6 @@ function changeView(id) {
         state = 'grid'
 
     }
-        
     document.querySelectorAll('#' + id)[0].scrollIntoView();
         
 }
