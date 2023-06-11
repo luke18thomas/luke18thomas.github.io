@@ -109,11 +109,7 @@ function loadPhotos(p) {
             console.log(k)*/
             
             let el = document.createElement("div");
-            el.innerHTML = "<div class='frame' id='" + id + "'> <img src='" + path + "'> </div> ";
-
             el.innerHTML = "<div class='frame' id='" + id + "' onClick = changeView('" + id + "')> <img src='" + path + "'> </div> ";
-
-            console.log(el.innerHTML)
             
             document.querySelector("#photos").append(el);
 

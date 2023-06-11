@@ -98,7 +98,7 @@ a #mode_switch {
     height: 90%;
     justify-content: center;
     justify-items: center;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 @media screen and (max-width: 980px) {
