@@ -6,32 +6,28 @@ let state = 'grid';
 let files = [];
 
 
-for (k = 44; k <= 102; k++) {
-    if (k != 2) {
+for (k = 25; k > 0; k--) {
     /*files.push("photos/digital/digital 0.jpg")*/
 
-        let n = '000' + k;
-        n = n.substring(n.length - 3, n.length);
-        
-        files.push("photos/fuji/fuji" + n + ".jpg")
+        let n = '00' + k;
+        n = n.substring(n.length - 2, n.length);
+
+    if (k <= 25) {
+        files.push("photos/newyork_winter/newyork_winter-" + n + ".jpg")
+    }
+    if (k <= 23) {
+        files.push("photos/newyork_spring/newyork_spring-" + n + ".jpg")
+    }
+    if (k <= 12) {
+        files.push("photos/film/film-" + n + ".jpg")
+    }
+    if (k <= 10) {
+        files.push("photos/in_progress/in_progress-" + n + ".jpg")
     }
 }
 
 
-files.push("photos/film/film-06.jpg");
-files.push("photos/film/film-03.jpg");
-files.push("photos/film/film-04.jpg");
-/*files.push("photos/film/film-05.jpg");*/
-files.push("photos/film/film-07.jpg");
-files.push("photos/film/film-08.jpg");
-files.push("photos/film/film-09.jpg");
-files.push("photos/film/film-12.jpg");
-files.push("photos/film/film-10.jpg");
-files.push("photos/film/film-11.jpg");
-files.push("photos/film/film-02.jpg");
-files.push("photos/film/film-01.jpg");
-
-loadPhotos("fuji")
+loadPhotos("newyork_winter")
 
 
 function toggleDarkMode() {
@@ -58,8 +54,8 @@ function changeView(id) {
     if (state == 'grid') {
 
         document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: contain');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.width = 'auto');
         document.querySelectorAll('#photos div').forEach((x) => x.style.height = 'auto');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.width = '100vw');
 
         state = 'scroll'
 
@@ -70,9 +66,9 @@ function changeView(id) {
 
     else if (state == 'scroll') {
         
-        document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: cover');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.height = '45vw');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.width = '45vw');
+        document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: contain');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.height = '25vw');
+        document.querySelectorAll('#photos div').forEach((x) => x.style.width = '25vw');
 
         state = 'grid'
 
@@ -101,12 +97,8 @@ function loadPhotos(p) {
 
         if (path.indexOf(p) != -1) {
 
-            /* in future make file name numbers like 00N */
-            let k = Number(path.substring(path.length-7, path.length-4))
-            let id = p + k
-
-            /*console.log(path)
-            console.log(k)*/
+            let n = path.substring(path.indexOf('-')+1, path.indexOf('-') + 3)
+            let id = p + '-' + n
             
             let el = document.createElement("div");
             el.innerHTML = "<div class='frame' id='" + id + "' onClick = changeView('" + id + "')> <img src='" + path + "'> </div> ";
