@@ -95,7 +95,7 @@ a #mode_switch {
 .frame img {
     object-fit: contain;
     width: 98%;
-    height: 98%;
+    height: 80%;
     justify-content: center;
     justify-items: center;
     border-radius: 0px;

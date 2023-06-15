@@ -21,7 +21,7 @@ for (k = 25; k > 0; k--) {
     if (k <= 12) {
         files.push("photos/film/film-" + n + ".jpg")
     }
-    if (k <= 10) {
+    if (k <= 29) {
         files.push("photos/in_progress/in_progress-" + n + ".jpg")
     }
 }
