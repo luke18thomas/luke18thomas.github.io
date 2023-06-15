@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0% 2% 0% 2%;
+    margin: 0% 0% 0% 0%;
     font-family: "Helvetica Neue";
     font-weight: 100;
     color: rgb(20,20,20);
@@ -85,17 +85,17 @@ a #mode_switch {
     scroll-behavior: smooth;
 }
 #photos div {
-    width:45vw;
-    height:45vw;
+    width:49vw;
+    height:49vw;
 }
 .frame div {
     justify-content: center;
     justify-items: center;
 }
 .frame img {
-    object-fit: contain;
+    object-fit: cover;
     width: 98%;
-    height: 80%;
+    height: 98%;
     justify-content: center;
     justify-items: center;
     border-radius: 0px;
@@ -108,7 +108,7 @@ a #mode_switch {
         margin: 3% 0% 0% 0%;
     }
     #header {
-        margin: 0% 5% 0% 5%;
+        margin: 0% 1% 0% 1%;
     }
     .header #header_left {
         flex-direction: row;
