@@ -72,6 +72,10 @@ function changeView(id) {
 
         state = 'grid'
 
+        /*document.querySelectorAll('.frame').forEach((x) => x.style = 'display: none')
+        document.querySelectorAll('#' + id)[0].style = 'display: flex'
+        document.querySelectorAll('#' + id)[0].style.width = 'auto';
+        document.querySelectorAll('#' + id)[0].style.height = 'auto';*/
     }
 
     document.querySelectorAll('#' + id)[0].scrollIntoView({
