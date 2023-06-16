@@ -31,11 +31,11 @@ body {
     align-items: center;
 }
 .header #instagram_link {
-    width: 1.5em;
+    width: 0.9em;
     margin-right: 0.25em;
 }
 .header #mode_switch {
-    width: 1.5em;
+    width: 1em;
     margin-right: 0%;
 }
 .header #h1_name {
@@ -73,7 +73,7 @@ a #mode_switch {
    margin-right: 5%; 
 }
 #categories a:hover { /* a:link a:visited a:hover a:active */
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #photos {

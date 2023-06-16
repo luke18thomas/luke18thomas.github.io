@@ -92,6 +92,13 @@ function loadPhotos(p) {
     /*document.querySelector("#" + p).style.fontWeight = 600;*/
     
     /*let numNodes = document.querySelector('#photos').childNodes.length;*/
+
+
+    document.querySelectorAll('a.category').forEach((category) => {category.innerHTML = category.innerHTML.replace('[', '')})
+    document.querySelectorAll('a.category').forEach((category) => {category.innerHTML = category.innerHTML.replace(']', '')})
+    
+    let category = document.querySelector('a#' + p).innerHTML
+    document.querySelector('a#' + p).innerHTML = '[' + category + ']'
         
     document.querySelector("#photos").replaceChildren();
         
