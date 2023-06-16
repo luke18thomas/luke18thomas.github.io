@@ -73,7 +73,7 @@ a #mode_switch {
    margin-right: 5%; 
 }
 #categories a:hover { /* a:link a:visited a:hover a:active */
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 #photos {
