@@ -85,8 +85,8 @@ a #mode_switch {
     scroll-behavior: smooth;
 }
 #photos div {
-    width:33vw;
-    height:49vw;
+    width:49vw;
+    height:65vw;
 }
 .frame div {
     justify-content: center;
@@ -94,8 +94,8 @@ a #mode_switch {
 }
 .frame img {
     object-fit: cover;
-    width: 97%;
-    height: 97%;
+    width: 98%;
+    height: 98%;
     justify-content: center;
     justify-items: center;
     border-radius: 0px;
