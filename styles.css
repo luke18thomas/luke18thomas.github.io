@@ -12,7 +12,7 @@ body {
 .landing {
     height:100vh;
     /*background-image: url("photos/newyork_spring/newyork_spring-05.jpg");*/
-    background-image: url("photos/newyork_winter/newyork_winter-17.jpg");
+    background-image: url("photos/newyork_winter/newyork_winter-17_hi.jpg");
     background-size: cover;
     display: flex;
     align-items: flex-end;
