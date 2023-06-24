@@ -13,7 +13,7 @@ body {
     height:100vh;
 }
 .landing img {
-    object-fit: contain;
+    object-fit: cover;
     height: 100vh;
 }
 .header {
