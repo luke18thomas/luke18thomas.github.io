@@ -9,6 +9,13 @@ body {
     background: rgb(250,250,250);
     text-align: center;
 }
+.landing {
+    height:100vh;
+}
+.landing img {
+    object-fit: contain;
+    height: 100vh;
+}
 .header {
     margin: 0% 6% 3% 6%;
     display: flex;
