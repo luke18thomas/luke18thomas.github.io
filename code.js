@@ -36,14 +36,14 @@ function toggleDarkMode() {
         
         document.querySelector('body').style.backgroundColor = 'rgb(28,28,30)';
         document.querySelector('body').style.color = 'rgb(250,250,250)';
-        document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta", "insta_white");
+        /*document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta", "insta_white");*/
         document.querySelector('#mode_switch').src = document.querySelector('#mode_switch').src.replace("dark_mode", "dark_mode_white");
         dark = true;
     }
     else {
         document.querySelector('body').style.backgroundColor = 'rgb(250,250,250)';
         document.querySelector('body').style.color = 'rgb(28,28,30)';
-        document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta_white", "insta");
+        /*document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta_white", "insta");*/
         document.querySelector('#mode_switch').src = document.querySelector('#mode_switch').src.replace("dark_mode_white", "dark_mode");
         dark = false;
     }

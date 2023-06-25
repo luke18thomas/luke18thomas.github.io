@@ -11,6 +11,8 @@ body {
 }
 .landing {
     height:90vh;
+    width: 100vw;
+    margin: 0%;
     /*background-image: url("photos/newyork_spring/newyork_spring-05.jpg");*/
     background-image: url("photos/newyork_winter/newyork_winter-17_hi.jpg");
     background-size: cover;
@@ -32,7 +34,7 @@ body {
 }
 #instagram_link {
     width: 1.5em;
-    margin: 20%;
+    margin: 0.8em 0.3em 0em 0em;
     
 }
 
