@@ -14,7 +14,7 @@ body {
     width: 100vw;
     margin: 0%;
     /*background-image: url("photos/newyork_spring/newyork_spring-05.jpg");*/
-    background-image: url("photos/newyork_winter/newyork_winter-17_hi.jpg");
+    background-image: url("photos/newyork_winter/newyork_winter-21_hi.jpg");
     background-size: cover;
     display: flex;
     align-items: stretch;
@@ -138,7 +138,6 @@ a #mode_switch {
 
 @media screen and (max-width: 980px) {
     body {
-        background: ;
         font-size: 1em;
         margin: 3% 0% 0% 0%;
     }
