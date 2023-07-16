@@ -41,7 +41,7 @@ body {
 
 #landing_left h1 {
     color: white;
-    font-size: 5em;
+    font-size: 3em;
     font-weight: 200;
     margin: 20%;
 }
@@ -121,14 +121,14 @@ a #mode_switch {
 }
 #photos div {
     width:49vw;
-    height:49vw;
+    height:65vw;
 }
 .frame div {
     justify-content: center;
     justify-items: center;
 }
 .frame img {
-    object-fit: contain;
+    object-fit: cover;
     width: 80%;
     height: 80%;
     justify-content: center;
