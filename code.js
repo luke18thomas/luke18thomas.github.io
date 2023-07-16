@@ -6,28 +6,21 @@ let state = 'grid';
 let files = [];
 
 
-for (k = 25; k > 0; k--) {
-    /*files.push("photos/digital/digital 0.jpg")*/
-
+for (k = 100; k > 0; k--) {
+    
         let n = '00' + k;
         n = n.substring(n.length - 2, n.length);
 
-    if (k <= 25) {
-        files.push("photos/newyork_winter/newyork_winter-" + n + ".jpg")
-    }
-    if (k <= 23) {
-        files.push("photos/newyork_spring/newyork_spring-" + n + ".jpg")
+    if (k <= 34) {
+        files.push("photos/fuji/fuji-" + n + ".jpg")
     }
     if (k <= 12) {
         files.push("photos/film/film-" + n + ".jpg")
     }
-    if (k <= 24) {
-        files.push("photos/in_progress/in_progress-" + n + ".jpg")
-    }
 }
 
 
-loadPhotos("newyork_winter")
+loadPhotos("fuji")
 
 
 function toggleDarkMode() {
