@@ -10,32 +10,8 @@ body {
     text-align: center;
 }
 
-.landing {
-    height:90vh;
-    width: 100vw;
-    margin: 0%;
-    /*background-image: url("photos/newyork_spring/newyork_spring-05.jpg");*/
-    background-image: url("photos/fuji/fuji-17.jpg");
-    background-size: cover;
-    display: flex;
-    align-items: stretch;
-    flex-direction: row;
-}
-#landing_left {
-    display: flex;
-    align-items: flex-end;
-    justify-content: start;
-    margin: 0vh 0vh 2vh 3vh;
-}
-#landing_right {
-    display: flex;
-    flex-direction: colum;
-    width: 100%;
-    justify-content: flex-end;
-    margin: 2vh 3vh 0vh 0vh;
-}
-#instagram_link {
-    width: 2em;
+.header #instagram_link {
+    width: 1em;
     margin: 0.8em 0.3em 0em 0em;
 }
 
@@ -75,6 +51,10 @@ body {
     font-size: 1.5em;
     letter-spacing: 0em;
     font-weight: 300;
+}
+.header a {
+    text-decoration: none;
+    color: inherit;
 }
 .header #h1_photos {
     font-size: 1.6em;
