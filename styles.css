@@ -9,18 +9,6 @@ body {
     background: rgb(250,250,250);
     text-align: center;
 }
-
-.header #instagram_link {
-    width: 1em;
-    margin: 0.8em 0.3em 0em 0em;
-}
-
-#landing_left h1 {
-    color: white;
-    font-size: 3em;
-    font-weight: 200;
-    margin: 20%;
-}
 .header {
     margin: 0% 6% 3% 6%;
     display: flex;
@@ -40,9 +28,12 @@ body {
     flex-direction: row;
     width: 100%;
     justify-content: flex-end;
-    align-items: center;
+    align-items: baseline;
 }
-#mode_switch {
+.header #instagram_link {
+    width: 1em;
+}
+.header #mode_switch {
     width: 1em;
     margin-right: 0%;
 }
