@@ -44,7 +44,9 @@ function toggleDarkMode() {
 
 function changeView(id) {
 
-    if (state == 'grid') {
+
+    /* grid > scroll */
+    /*if (state == 'grid') {
 
         document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: contain');
         document.querySelectorAll('#photos div').forEach((x) => x.style.width = 'auto');
@@ -52,12 +54,10 @@ function changeView(id) {
 
         state = 'scroll'
 
-        /* save current scroll state to return to */
-        /* if the scroll view picture is still within view */
+    }*/
 
-    }
-
-    else if (state == 'scroll') {
+    /* scroll > grid */
+    /*else if (state == 'scroll') {
         
         document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: cover');
         document.querySelectorAll('#photos div').forEach((x) => x.style.width = '49vw');
@@ -65,10 +65,25 @@ function changeView(id) {
 
         state = 'grid'
 
-        /*document.querySelectorAll('.frame').forEach((x) => x.style = 'display: none')
+        document.querySelectorAll('.frame').forEach((x) => x.style = 'display: none')
         document.querySelectorAll('#' + id)[0].style = 'display: flex'
         document.querySelectorAll('#' + id)[0].style.width = 'auto';
-        document.querySelectorAll('#' + id)[0].style.height = 'auto';*/
+    }*/
+
+    console.log(id)
+
+    /* grid > overlay */
+    if (state == 'grid') {
+
+        document.querySelector(".overlay").style.display = "flex";
+        state = 'overlay'
+    }
+
+    /* overlay > grid */
+    else if (state == 'scroll') {
+        
+        document.querySelector(".overlay").style.display = "none";
+        state = 'grid'
     }
 
     document.querySelectorAll('#' + id)[0].scrollIntoView({
