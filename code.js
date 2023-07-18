@@ -27,22 +27,22 @@ function toggleDarkMode() {
 
     if (!dark) {
         
-        document.querySelector('body').style.backgroundColor = 'rgb(28,28,30)';
+        document.querySelector('body').style.backgroundColor = 'rgb(22,22,24)';
         document.querySelector('body').style.color = 'rgb(250,250,250)';
-        /*document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta", "insta_white");*/
+        document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta", "insta_white");
         document.querySelector('#mode_switch').src = document.querySelector('#mode_switch').src.replace("dark_mode", "dark_mode_white");
         dark = true;
     }
     else {
         document.querySelector('body').style.backgroundColor = 'rgb(250,250,250)';
-        document.querySelector('body').style.color = 'rgb(28,28,30)';
-        /*document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta_white", "insta");*/
+        document.querySelector('body').style.color = 'rgb(22,22,24)';
+        document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta_white", "insta");
         document.querySelector('#mode_switch').src = document.querySelector('#mode_switch').src.replace("dark_mode_white", "dark_mode");
         dark = false;
     }
 }
 
-function changeView(id) {
+function changeView(path) {
 
 
     /* grid > scroll */
@@ -70,27 +70,26 @@ function changeView(id) {
         document.querySelectorAll('#' + id)[0].style.width = 'auto';
     }*/
 
-    console.log(id)
-
     /* grid > overlay */
     if (state == 'grid') {
 
+        document.getElementById("overlay_img").src = path;
         document.querySelector(".overlay").style.display = "flex";
         state = 'overlay'
     }
 
     /* overlay > grid */
-    else if (state == 'scroll') {
+    else if (state == 'overlay') {
         
         document.querySelector(".overlay").style.display = "none";
         state = 'grid'
     }
 
-    document.querySelectorAll('#' + id)[0].scrollIntoView({
-            behavior: 'auto', /*smooth*/
+    /*document.querySelectorAll('#' + path)[0].scrollIntoView({
+            behavior: 'auto',*/ /*smooth*/ /*
             block: 'center',
             inline: 'center'
-    });
+    });*/
         
 }
 
@@ -113,7 +112,7 @@ function loadPhotos(p) {
             let id = p + '-' + n
             
             let el = document.createElement("div");
-            el.innerHTML = "<div class='frame' id='" + id + "' onClick = changeView('" + id + "')> <img src='" + path + "'> </div> ";
+            el.innerHTML = "<div class='frame' id='" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";
             
             document.querySelector("#photos").append(el);
 
