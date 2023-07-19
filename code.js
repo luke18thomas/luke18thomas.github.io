@@ -80,7 +80,7 @@ function changeView(path) {
 
     /* overlay > grid */
     else if (state == 'overlay') {
-        
+
         document.querySelector(".overlay").style.display = "none";
         state = 'grid'
     }
@@ -154,13 +154,22 @@ document.addEventListener('keypress', function(e) {
 })
 */
 
-/*
-document.getElementById('photo').addEventListener("click", function(e) {
+document.getElementById("overlay_img").addEventListener("click", function(e) {
     
     var x = e.clientX;
-    let mid = document.getElementById('photo').width;
+    let mid = document.getElementById("overlay_img").width;
+
+    console.log("overlay_img")
     
-    if (x < mid/2) changePhoto('left')
-    else changePhoto('right')
+    if (x < mid/2)
+        console.log("left")
+    else
+        console.log("right")
+    
 })
-*/
+
+document.querySelector(".overlay").addEventListener("click", function(e) {
+
+    console.log("overlay")
+    
+})
