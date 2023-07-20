@@ -34,9 +34,11 @@
   </div>
 
   <div class="overlay">
-    <div class="frame" onclick="changeView()"">
+    <div id="overlay_top"></div>
+    <div class="frame" onTouch="printTouch(e)"">
       <img  id="overlay_img" src="photos/fuji/fuji-28.jpg"</img>
     </div>
+    <div id="overlay_bottom"></div>
   </div>
   
   <script src="code.js"></script>

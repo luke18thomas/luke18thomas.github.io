@@ -20,6 +20,14 @@ body {
     flex-direction:column;
     justify-content: center;
 }
+.overlay #overlay_top {
+    display: flex;
+    height: 100vh;
+}
+.overlay #overlay_bottom {
+    display: flex;
+    height: 100vh;
+}
 .overlay .frame {
     top: 33vh;
     width: auto;

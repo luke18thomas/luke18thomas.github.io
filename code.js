@@ -12,15 +12,15 @@ for (k = 100; k > 0; k--) {
         n = n.substring(n.length - 2, n.length);
 
     if (k <= 34) {
-        files.push("photos/fuji/fuji-" + n + ".jpg")
+        files.push("photos/fuji/fuji-" + n + ".jpg");
     }
     if (k <= 12) {
-        files.push("photos/film/film-" + n + ".jpg")
+        files.push("photos/film/film-" + n + ".jpg");
     }
 }
 
 
-loadPhotos("fuji")
+loadPhotos("fuji");
 
 
 function toggleDarkMode() {
@@ -75,14 +75,14 @@ function changeView(path) {
 
         document.getElementById("overlay_img").src = path;
         document.querySelector(".overlay").style.display = "flex";
-        state = 'overlay'
+        state = 'overlay';
     }
 
     /* overlay > grid */
     else if (state == 'overlay') {
 
         document.querySelector(".overlay").style.display = "none";
-        state = 'grid'
+        state = 'grid';
     }
 
     /*document.querySelectorAll('#' + path)[0].scrollIntoView({
@@ -108,8 +108,8 @@ function loadPhotos(p) {
 
         if (path.indexOf(p) != -1) {
 
-            let n = path.substring(path.indexOf('-')+1, path.indexOf('-') + 3)
-            let id = p + '-' + n
+            let n = path.substring(path.indexOf('-')+1, path.indexOf('-') + 3);
+            let id = p + '-' + n;
             
             let el = document.createElement("div");
             el.innerHTML = "<div class='frame' id='" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";
@@ -127,7 +127,7 @@ function setTitle() {
 }
 
 function setPhoto(k) {
-    i = k-1
+    i = k-1;
     document.getElementById('photo').src = files[i];
 }
 
@@ -159,7 +159,7 @@ document.getElementById("overlay_img").addEventListener("click", function(e) {
     var x = e.clientX;
     let mid = document.getElementById("overlay_img").width;
 
-    console.log("overlay_img")
+    console.log("overlay_img");
     
     if (x < mid/2)
         console.log("left")
@@ -168,8 +168,17 @@ document.getElementById("overlay_img").addEventListener("click", function(e) {
     
 })
 
-document.querySelector(".overlay").addEventListener("click", function(e) {
-
-    console.log("overlay")
-    
+document.getElementById("overlay_top").addEventListener("click", function(e) {
+    changeView();
 })
+
+document.getElementById("overlay_bottom").addEventListener("click", function(e) {
+    changeView();
+})
+
+document.getElementById("overlay_img").addEventListener("touchmove", printTouch)
+
+function printTouch(e) {
+    console.log(e.type);
+    changeView();
+}
