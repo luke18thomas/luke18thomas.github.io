@@ -44,32 +44,6 @@ function toggleDarkMode() {
 
 function changeView(path) {
 
-
-    /* grid > scroll */
-    /*if (state == 'grid') {
-
-        document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: contain');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.width = 'auto');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.height = 'auto');
-
-        state = 'scroll'
-
-    }*/
-
-    /* scroll > grid */
-    /*else if (state == 'scroll') {
-        
-        document.querySelectorAll('.frame img').forEach((x) => x.style = 'object-fit: cover');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.width = '49vw');
-        document.querySelectorAll('#photos div').forEach((x) => x.style.height = '65vw');
-
-        state = 'grid'
-
-        document.querySelectorAll('.frame').forEach((x) => x.style = 'display: none')
-        document.querySelectorAll('#' + id)[0].style = 'display: flex'
-        document.querySelectorAll('#' + id)[0].style.width = 'auto';
-    }*/
-
     /* grid > overlay */
     if (state == 'grid') {
 
@@ -167,18 +141,3 @@ document.getElementById("overlay_img").addEventListener("click", function(e) {
         console.log("right")
     
 })
-
-document.getElementById("overlay_top").addEventListener("click", function(e) {
-    changeView();
-})
-
-document.getElementById("overlay_bottom").addEventListener("click", function(e) {
-    changeView();
-})
-
-document.getElementById("overlay_img").addEventListener("touchmove", printTouch)
-
-function printTouch(e) {
-    console.log(e.type);
-    changeView();
-}
