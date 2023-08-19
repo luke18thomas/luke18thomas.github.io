@@ -48,14 +48,14 @@ function changeView(path) {
     if (state == 'grid') {
 
         document.getElementById("overlay_img").src = path;
-        document.querySelector(".overlay").style.display = "flex";
+        document.querySelector("#overlay").style.display = "flex";
         state = 'overlay';
     }
 
     /* overlay > grid */
     else if (state == 'overlay') {
 
-        document.querySelector(".overlay").style.display = "none";
+        document.querySelector("#overlay").style.display = "none";
         state = 'grid';
     }
 
