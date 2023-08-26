@@ -1,7 +1,7 @@
 let i = 0;
 let k = 0;
 let dark = false;
-let state = 'grid';
+let state = 'home';
 
 let files = [];
 
@@ -27,7 +27,7 @@ function toggleDarkMode() {
 
     if (!dark) {
         
-        document.querySelector('body').style.backgroundColor = 'rgb(22,22,24)';
+        document.querySelector('body').style.backgroundColor = 'rgb(12,12,14)';
         document.querySelector('body').style.color = 'rgb(250,250,250)';
         document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta", "insta_white");
         document.querySelector('#mode_switch').src = document.querySelector('#mode_switch').src.replace("dark_mode", "dark_mode_white");
@@ -35,7 +35,7 @@ function toggleDarkMode() {
     }
     else {
         document.querySelector('body').style.backgroundColor = 'rgb(250,250,250)';
-        document.querySelector('body').style.color = 'rgb(22,22,24)';
+        document.querySelector('body').style.color = 'rgb(12,12,14)';
         document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta_white", "insta");
         document.querySelector('#mode_switch').src = document.querySelector('#mode_switch').src.replace("dark_mode_white", "dark_mode");
         dark = false;
@@ -44,8 +44,15 @@ function toggleDarkMode() {
 
 function changeView(path) {
 
+    /* home > grid */
+    if (state == 'home') {
+        document.querySelector("#menu").style.display = "none";
+        document.querySelector("#content").style.display = "flex";
+        state = 'grid'
+    }
+
     /* grid > overlay */
-    if (state == 'grid') {
+    else if (state == 'grid') {
 
         document.getElementById("overlay_img").src = path;
         document.querySelector("#overlay").style.display = "flex";
