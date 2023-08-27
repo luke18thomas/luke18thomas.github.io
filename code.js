@@ -21,6 +21,7 @@ for (k = 100; k > 0; k--) {
 
 
 loadPhotos("fuji");
+toggleDarkMode();
 
 
 function toggleDarkMode() {

@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 1% 0% 0% 0%;
+    margin: 1% 8% 0% 8%;
     font-family: "Helvetica Neue";
     font-weight: 100;
     color: rgb(28,28,30);
@@ -33,14 +33,11 @@ body {
     border-radius: 0px;
 }
 .header {
-    margin: 0% 4% 0% 4%;
     display: flex;
     align-items: stretch;
     flex-direction: row;
-    /*background: white;*/
-    /*position: -webkit-sticky;*/
-    /*position: sticky;*/
     top: 0;
+    margin:0.2em;
 }
 .header #header_left {
     flex-direction: row;
@@ -55,6 +52,7 @@ body {
 }
 .header #instagram_link {
     width: 1em;
+    margin-left: 1em;
 }
 .header #mode_switch {
     width: 1em;
@@ -68,7 +66,6 @@ body {
 .header a {
     text-decoration: none;
     color: inherit;
-    margin: 0vw 1vw 0vw 1vw;
 }
 .header #h1_photos {
     font-size: 1.6em;
@@ -82,15 +79,15 @@ body {
     margin-top: 5%;
 }
 #menu .frame {
-    width: 25em;
-    height: 44em;
-    margin: 1%;
+    width: 33%;
+    height: auto;
+    margin: 0%;
 }
 #content {
     display: none;
     flex-direction: column;
     align-items: center;
-    margin: 5%;
+    margin-top: 5%;
 }
 #content a {
     margin: 0vw 2vw 0vw 2vw;
@@ -104,17 +101,17 @@ body {
     scroll-behavior: smooth;
 }
 #photos div {
-    width:20vw;
-    height:20vw;
+    width:21vw;
+    height:21vw;
 }
 .frame div {
     justify-content: center;
     justify-items: center;
 }
 .frame img {
-    object-fit: contain;
-    width: 90%;
-    height: 90%;
+    object-fit: cover;
+    width: 95%;
+    height: 95%;
     justify-content: center;
     justify-items: center;
     border-radius: 0px;
@@ -125,13 +122,13 @@ body {
     height: 98%;
     justify-content: center;
     justify-items: center;
-    border-radius: 6px;
+    border-radius: 16px;
 }
 
 @media screen and (max-width: 980px) {
     body {
         font-size: 1em;
-        margin: 3% 0% 0% 0%;
+        margin: 3% 3% 0% 3%;
     }
     #header {
         margin: 0% 1% 0% 1%;
@@ -155,12 +152,20 @@ body {
         letter-spacing: 0em;
         font-weight: 300;
     }
+    #menu {
+        flex-direction: column;
+        align-content: center;
+    }
+    #menu .frame {
+        width: 100%;
+        height: auto;
+    }
     #content { 
         display: none;
         flex-direction: column;
-        margin: 0% 0% 0% 0%;
+        margin-top: 5%;
     }
     #photos div {
-        width:25vw;
-        height:25vw;
+        width:47vw;
+        height:47vw;
     }
