@@ -6,21 +6,23 @@ let state = 'home';
 let files = [];
 
 
-for (k = 100; k > 0; k--) {
+for (k = 50; k > 0; k--) {
     
-        let n = '00' + k;
-        n = n.substring(n.length - 2, n.length);
+    let n = '00' + k;
+    n = n.substring(n.length - 2, n.length);
 
-    if (k <= 50) {
-        files.push("photos/fuji/fuji-" + n + ".jpg");
+    if (k > 17 && k < 51) {
+        files.push("photos/spring/fuji-" + n + ".jpg");
     }
-    if (k <= 12) {
+    if (k < 17) {
+        files.push("photos/winter/fuji-" + n + ".jpg");
+    }
+    if (k < 12) {
         files.push("photos/film/film-" + n + ".jpg");
     }
 }
 
 
-loadPhotos("fuji");
 toggleDarkMode();
 
 
@@ -100,6 +102,8 @@ function loadPhotos(p) {
 
             }
         })
+
+    changeView();
 
 }
 

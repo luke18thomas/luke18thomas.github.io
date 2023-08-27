@@ -19,6 +19,7 @@ body {
     display: none;
     flex-direction:column;
     justify-content: center;
+    align-items: center;
 }
 #overlay_frame {
     top: 33vh;
@@ -74,9 +75,10 @@ body {
 #menu {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 5%;
+    align-items: center;
+    font-size: 0.7em;
+    height: 90vh;
 }
 #menu .frame {
     width: 33%;
@@ -109,11 +111,10 @@ body {
     justify-items: center;
 }
 .frame img {
-    object-fit: cover;
-    width: 95%;
-    height: 95%;
+    object-fit: contain;
+    width: 90%;
+    height: 90%;
     justify-content: center;
-    justify-items: center;
     border-radius: 0px;
 }
 #menu .frame img {
@@ -131,7 +132,7 @@ body {
         margin: 3% 3% 0% 3%;
     }
     #header {
-        margin: 0% 1% 0% 1%;
+        margin: 0% 1% 7% 1%;
     }
     .header #header_left {
         flex-direction: row;
@@ -155,10 +156,12 @@ body {
     #menu {
         flex-direction: column;
         align-content: center;
+        height: auto;
     }
     #menu .frame {
         width: 100%;
-        height: auto;
+        height: 28vh;
+        margin-bottom: 4%;
     }
     #content { 
         display: none;
