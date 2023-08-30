@@ -23,7 +23,7 @@ for (k = 50; k > 0; k--) {
 }
 
 
-toggleDarkMode();
+/*toggleDarkMode();*/
 
 
 function toggleDarkMode() {
