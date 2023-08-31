@@ -24,6 +24,7 @@ for (k = 50; k > 0; k--) {
 
 
 /*toggleDarkMode();*/
+/*loadPhotos('spring')*/
 
 
 function toggleDarkMode() {

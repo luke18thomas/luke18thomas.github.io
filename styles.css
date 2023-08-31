@@ -2,12 +2,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 1% 8% 0% 8%;
+    /*margin: 1% 8% 0% 8%;*/
+    margin: 0%;
     font-family: "Helvetica Neue";
     font-weight: 100;
     color: rgb(28,28,30);
     background: rgb(250,250,250);
     text-align: center;
+}
+#page {
+    margin: 1% 12% 1% 12%;
 }
 #overlay {
     position: fixed;
@@ -27,8 +31,8 @@ body {
 }
 #overlay_img {
     object-fit: contain;
-    width: 73vw;
-    height: 73vh;
+    width: auto;
+    height: 95vh;
     justify-content: center;
     justify-items: center;
     border-radius: 0px;
@@ -38,7 +42,7 @@ body {
     align-items: stretch;
     flex-direction: row;
     top: 0;
-    margin:0.2em;
+    margin-bottom:3%;
 }
 .header #header_left {
     flex-direction: row;
@@ -77,19 +81,16 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 0.7em;
-    height: 90vh;
 }
 #menu .frame {
-    width: 33%;
+    width: 50%;
     height: auto;
-    margin: 0%;
+    padding: 0%;
 }
 #content {
     display: none;
     flex-direction: column;
     align-items: center;
-    margin-top: 5%;
 }
 #content a {
     margin: 0vw 2vw 0vw 2vw;
@@ -103,10 +104,8 @@ body {
     scroll-behavior: smooth;
 }
 #photos div {
-    /*width:21vw;*/
-    /*height:21vw;*/
-    height: 95vh;
-    margin:0%;
+    width: 100%;
+    margin-bottom: 4%;
 }
 .frame div {
     justify-content: center;
@@ -114,43 +113,31 @@ body {
 }
 .frame img {
     object-fit: contain;
-    width: 95%;
-    height: 95%;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     border-radius: 0px;
 }
 #menu .frame img {
     object-fit: cover;
     width: 98%;
-    height: 98%;
-    justify-content: center;
-    justify-items: center;
-    border-radius: 16px;
+    border-radius: 25px;
 }
 
 @media screen and (max-width: 980px) {
     body {
-        font-size: 1em;
-        margin: 3% 3% 0% 3%;
+        margin: 0%;
     }
-    #header {
-        margin: 0% 1% 7% 1%;
+    #page {
+        margin: 1% 2% 1% 2%;
     }
     .header #header_left {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: baseline;
         font-size: 0.6em;
     }
     .header #header_right {
-        flex-direction: row;
-        width: 100%;
-        justify-content: flex-end;
-        align-items: center;
         font-size: 1em;
     }
     .header #home {
-        margin-right: 0px;
         font-size: 1.5em;
         letter-spacing: 0em;
         font-weight: 300;
@@ -162,15 +149,6 @@ body {
     }
     #menu .frame {
         width: 100%;
-        height: 28vh;
-        margin-bottom: 4%;
-    }
-    #content { 
-        display: none;
-        flex-direction: column;
-        margin-top: 5%;
-    }
-    #photos div {
-        width:47vw;
-        height:47vw;
+        height: 100%;
+        margin-bottom: 2%;
     }
