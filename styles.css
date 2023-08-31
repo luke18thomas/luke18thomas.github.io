@@ -133,9 +133,9 @@ body {
     }
     #overlay_img {
         object-fit: contain;
-        width: 99vw;
+        width: 98vw;
         max-height: 98vh;
-        max-width: 99vw;
+        max-width: 98vw;
         justify-content: center;
         justify-items: center;
         border-radius: 0px;
