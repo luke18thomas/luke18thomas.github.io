@@ -133,8 +133,8 @@ body {
     }
     #overlay_img {
         object-fit: contain;
-        width: 98vw;
-        max-height: 98vh;
+        width: 99vw;
+        max-height: 99vh;
         justify-content: center;
         justify-items: center;
         border-radius: 0px;
