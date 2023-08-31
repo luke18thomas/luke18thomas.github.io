@@ -41,7 +41,7 @@ body {
     align-items: stretch;
     flex-direction: row;
     top: 0;
-    margin-bottom:4%;
+    margin-bottom: 6%;
 }
 .header #header_left {
     flex-direction: row;
@@ -104,7 +104,7 @@ body {
 }
 #photos div {
     width: 100%;
-    margin-bottom: 4%;
+    margin-bottom: 8%;
 }
 .frame div {
     justify-content: center;
@@ -128,7 +128,8 @@ body {
         margin: 3% 0% 3% 0%;
     }
     #page {
-        margin: 1% 2% 1% 2%;
+        /*margin: 1% 2% 1% 2%;*/
+        margin: 1% 4% 1% 4%;
     }
     #overlay_img {
         object-fit: contain;
