@@ -130,6 +130,14 @@ body {
     #page {
         margin: 1% 2% 1% 2%;
     }
+    #overlay_img {
+        object-fit: contain;
+        width: 98vw;
+        max-height: 98vh;
+        justify-content: center;
+        justify-items: center;
+        border-radius: 0px;
+    }
     .header #header_left {
         font-size: 0.6em;
     }
