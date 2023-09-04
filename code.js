@@ -14,7 +14,7 @@ for (k = 50; k > 0; k--) {
     if (k >= 1 && k <= 39) {
         files.push("photos/summer/fuji-" + n + ".jpg");
     }
-    if (k >= 18 && k <= 51) {
+    if (k >= 18 && k <= 32) {
         files.push("photos/spring/fuji-" + n + ".jpg");
     }
     if (k <= 17) {
