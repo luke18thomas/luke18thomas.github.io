@@ -25,10 +25,13 @@ for (k = 50; k > 0; k--) {
     }
 }
 
+var date = new Date();
+var current_hour = date.getHours();
+console.log(current_hour);
 
-/*toggleDarkMode();*/
-/*loadPhotos('spring')*/
-
+if ((current_hour >= 20 && current_hour <= 23) || (current_hour <= 7)) {
+    toggleDarkMode();
+}
 
 function toggleDarkMode() {
 
