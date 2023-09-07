@@ -86,7 +86,6 @@ body {
 #menu .frame {
     width: 50%;
     height: auto;
-    padding: 0%;
 }
 #content {
     display: none;
@@ -148,7 +147,7 @@ body {
 #menu .frame img {
     object-fit: cover;
     width: 98%;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 980px) {
