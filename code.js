@@ -11,7 +11,7 @@ for (k = 100; k > 0; k--) {
     let n = '00' + k;
     n = n.substring(n.length - 2, n.length);
 
-    if (k <= 43) {
+    if (k <= 39) {
         files.push("photos/summer/fuji-" + n + ".jpg");
     }
     if (k <= 18) {
@@ -19,6 +19,9 @@ for (k = 100; k > 0; k--) {
     }
     if (k <= 17) {
         files.push("photos/winter/fuji-" + n + ".jpg");
+    }
+    if (k <= 13) {
+        files.push("photos/portrait/fuji-" + n + ".jpg");
     }
     if (k <= 12) {
         files.push("photos/film/film-" + n + ".jpg");
@@ -29,7 +32,7 @@ var date = new Date();
 var current_hour = date.getHours();
 /*console.log(current_hour);*/
 
-if ((current_hour >= 20 && current_hour <= 23) || (current_hour <= 7)) {
+if ((current_hour >= 19 && current_hour <= 23) || (current_hour <= 7)) {
     toggleDarkMode();
 }
 
@@ -110,7 +113,7 @@ function loadPhotos(p) {
             
             let el = document.createElement("div");
             /*el.innerHTML = "<div class='frame' id='photo-" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";*/
-            el.innerHTML = "<div class='frame' id='photo-" + path + "' onClick = changeView('" + path + "') onMouseOver = myScrollTo('thumb-" + path + "')> <img src='" + path + "'> </div> ";
+            el.innerHTML = "<div class='frame' id='photo-" + path + "' onClick = changeView('" + path + "') onMouseOver = myScrollTo('" + path + "')> <img src='" + path + "'> </div> ";
             
             document.querySelector("#photos").append(el);
 
@@ -129,7 +132,7 @@ function loadPhotos(p) {
             let id = p + '-' + n;
             
             let el = document.createElement("div");
-            el.innerHTML = "<div class='frame' id='thumb-" + path + "' onClick = myScrollTo('photo-" + path + "')> <img src='" + path + "'> </div> ";
+            el.innerHTML = "<div class='frame' id='thumb-" + path + "' onClick = myScrollTo('" + path + "')> <img src='" + path + "'> </div> ";
             
             document.querySelector("#thumbs").append(el);
 
@@ -141,7 +144,10 @@ function loadPhotos(p) {
 }
 
 function myScrollTo(id) {
-    document.getElementById(id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})
+    console.log('photo-' + id)
+    console.log('thumb-' + id)
+    document.getElementById('thumb-'+ id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
+    document.getElementById('photo-'+ id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
 }
 
 
