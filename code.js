@@ -33,10 +33,10 @@ if ((current_hour >= 20 && current_hour <= 23) || (current_hour <= 7)) {
     toggleDarkMode();
 }
 
-/*loadPhotos("summer")
+loadPhotos("summer")
 
 document.querySelector("#photos").style.display = "flex";
-document.querySelector("#thumbs").style.display = "flex";*/
+document.querySelector("#thumbs").style.display = "flex";
 
 
 
@@ -110,7 +110,7 @@ function loadPhotos(p) {
             let id = p + '-' + n;
             
             let el = document.createElement("div");
-            el.innerHTML = "<div class='frame' id='" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";
+            el.innerHTML = "<div class='frame' id='photo-" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";
             
             document.querySelector("#photos").append(el);
 
@@ -129,7 +129,9 @@ function loadPhotos(p) {
             let id = p + '-' + n;
             
             let el = document.createElement("div");
-            el.innerHTML = "<div class='frame' id='" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";
+            el.innerHTML = "<div class='frame' id='thumb-" + path + "' onClick = myScrollTo('photo-" + path + "')> <img src='" + path + "'> </div> ";
+
+            console.log(el.innerHTML)
             
             document.querySelector("#thumbs").append(el);
 
@@ -139,6 +141,12 @@ function loadPhotos(p) {
     changeView();
 
 }
+
+function myScrollTo(id) {
+    console.log(id)
+    document.getElementById(id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})
+}
+
 
 function setTitle() {
     console.log('<h1 id="photos_h1">' + t + '</h1>');

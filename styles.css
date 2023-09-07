@@ -91,7 +91,7 @@ body {
     flex-direction: row;
     align-items: flex-start;
     margin: 0% 0% 0% 0%;
-    height: 80vh;
+    height: 90vh;
     overflow: auto;
 }
 #content a {
