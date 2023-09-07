@@ -80,11 +80,12 @@ body {
 #menu {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
 }
 #menu .frame {
-    width: 50%;
+    width: 25%;
     height: auto;
 }
 #content {
@@ -183,12 +184,14 @@ body {
         margin: 0%;
     }
     #menu {
-        flex-direction: column;
-        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
         height: auto;
     }
     #menu .frame {
-        width: 100%;
+        width: 48vw;
         height: 100%;
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
