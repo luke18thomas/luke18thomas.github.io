@@ -6,15 +6,15 @@ let state = 'home';
 let files = [];
 
 
-for (k = 50; k > 0; k--) {
+for (k = 100; k > 0; k--) {
     
     let n = '00' + k;
     n = n.substring(n.length - 2, n.length);
 
-    if (k >= 1 && k <= 39) {
+    if (k <= 39) {
         files.push("photos/summer/fuji-" + n + ".jpg");
     }
-    if (k >= 18 && k <= 32) {
+    if (k <= 18) {
         files.push("photos/spring/fuji-" + n + ".jpg");
     }
     if (k <= 17) {
@@ -27,11 +27,18 @@ for (k = 50; k > 0; k--) {
 
 var date = new Date();
 var current_hour = date.getHours();
-console.log(current_hour);
+/*console.log(current_hour);*/
 
 if ((current_hour >= 20 && current_hour <= 23) || (current_hour <= 7)) {
     toggleDarkMode();
 }
+
+loadPhotos("summer")
+
+document.querySelector("#photos").style.display = "flex";
+document.querySelector("#thumbs").style.display = "flex";
+
+
 
 function toggleDarkMode() {
 
@@ -106,6 +113,25 @@ function loadPhotos(p) {
             el.innerHTML = "<div class='frame' id='" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";
             
             document.querySelector("#photos").append(el);
+
+            }
+        })
+
+    document.querySelector("#thumbs").replaceChildren();
+        
+    files.forEach((path) => {
+
+        /*console.log(path)*/
+
+        if (path.indexOf(p) != -1) {
+
+            let n = path.substring(path.indexOf('-')+1, path.indexOf('-') + 3);
+            let id = p + '-' + n;
+            
+            let el = document.createElement("div");
+            el.innerHTML = "<div class='frame' id='" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";
+            
+            document.querySelector("#thumbs").append(el);
 
             }
         })
