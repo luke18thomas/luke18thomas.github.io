@@ -11,7 +11,7 @@ for (k = 100; k > 0; k--) {
     let n = '00' + k;
     n = n.substring(n.length - 2, n.length);
 
-    if (k <= 39) {
+    if (k <= 43) {
         files.push("photos/summer/fuji-" + n + ".jpg");
     }
     if (k <= 18) {
