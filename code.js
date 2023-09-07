@@ -39,7 +39,6 @@ document.querySelector("#photos").style.display = "flex";
 document.querySelector("#thumbs").style.display = "flex";*/
 
 
-
 function toggleDarkMode() {
 
     if (!dark) {
@@ -110,7 +109,8 @@ function loadPhotos(p) {
             let id = p + '-' + n;
             
             let el = document.createElement("div");
-            el.innerHTML = "<div class='frame' id='photo-" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";
+            /*el.innerHTML = "<div class='frame' id='photo-" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";*/
+            el.innerHTML = "<div class='frame' id='photo-" + path + "' onClick = changeView('" + path + "') onMouseOver = myScrollTo('thumb-" + path + "')> <img src='" + path + "'> </div> ";
             
             document.querySelector("#photos").append(el);
 
@@ -130,8 +130,6 @@ function loadPhotos(p) {
             
             let el = document.createElement("div");
             el.innerHTML = "<div class='frame' id='thumb-" + path + "' onClick = myScrollTo('photo-" + path + "')> <img src='" + path + "'> </div> ";
-
-            console.log(el.innerHTML)
             
             document.querySelector("#thumbs").append(el);
 
@@ -143,7 +141,6 @@ function loadPhotos(p) {
 }
 
 function myScrollTo(id) {
-    console.log(id)
     document.getElementById(id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})
 }
 
@@ -186,11 +183,24 @@ document.getElementById("overlay_img").addEventListener("click", function(e) {
     var x = e.clientX;
     let mid = document.getElementById("overlay_img").width;
 
-    console.log("overlay_img");
+    /*console.log("overlay_img");
     
     if (x < mid/2)
         console.log("left")
     else
-        console.log("right")
+        console.log("right")*/
+    
+})
+
+document.getElementById("photos").addEventListener("scroll", function(e) {
+
+    console.log(e)
+
+    /*console.log("overlay_img");
+    
+    if (x < mid/2)
+        console.log("left")
+    else
+        console.log("right")*/
     
 })

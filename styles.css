@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 #page {
-    margin: 2% 12% 2% 12%;
+    margin: 0% 12% 2% 12%;
 }
 #overlay {
     position: fixed;
@@ -41,7 +41,9 @@ body {
     align-items: stretch;
     flex-direction: row;
     top: 0;
-    margin-bottom:4%;
+    heigh: 4vh;
+    margin-top: 1vh;
+    margin-bottom:3vh;
 }
 .header #header_left {
     flex-direction: row;
@@ -90,8 +92,8 @@ body {
     display: none;
     flex-direction: row;
     align-items: flex-start;
-    margin: 0% 0% 0% 0%;
-    height: 90vh;
+    margin: 0% 10% 0% 10%;
+    height: 85vh;
     overflow: auto;
 }
 #content a {
@@ -146,7 +148,7 @@ body {
 #menu .frame img {
     object-fit: cover;
     width: 98%;
-    border-radius: 25px;
+    border-radius: 0px;
 }
 
 @media screen and (max-width: 980px) {
