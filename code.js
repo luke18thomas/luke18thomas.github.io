@@ -36,9 +36,9 @@ if ((current_hour >= 19 && current_hour <= 23) || (current_hour <= 7)) {
     toggleDarkMode();
 }
 
-loadPhotos("summer")
+/*loadPhotos("summer")
 document.querySelector("#photos").style.display = "flex";
-document.querySelector("#thumbs").style.display = "flex";
+document.querySelector("#thumbs").style.display = "flex";*/
 
 
 function toggleDarkMode() {
