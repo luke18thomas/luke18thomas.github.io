@@ -36,9 +36,9 @@ if ((current_hour >= 19 && current_hour <= 23) || (current_hour <= 7)) {
     toggleDarkMode();
 }
 
-/*loadPhotos("summer")
+loadPhotos("summer")
 document.querySelector("#photos").style.display = "flex";
-document.querySelector("#thumbs").style.display = "flex";*/
+document.querySelector("#thumbs").style.display = "flex";
 
 
 function toggleDarkMode() {
@@ -144,7 +144,7 @@ function loadPhotos(p) {
 
 function myScrollTo(id) {
     document.getElementById('thumb-'+ id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
-    /*document.getElementById('photo-'+ id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});*/
+    document.getElementById('photo-'+ id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
 }
 
 

@@ -41,7 +41,7 @@ body {
     align-items: stretch;
     flex-direction: row;
     top: 0;
-    heigh: 4vh;
+    height: 4vh;
     margin-top: 1vh;
     margin-bottom:3vh;
 }
@@ -244,28 +244,56 @@ body {
     #content {
         margin: 0%;
         justify-content: center;
+        flex-direction: column;
+        height: 80vh;
     }
     #photos_scroll {
-        overflow: auto;
+        overflow-x: auto;
         width: 100%;
-        height: 100%;
+        height: auto;
+        margin-top: 5%;
     }
     #photos {
-        height: auto;
+        height: 100%;
         width: 100%;
         flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
     }
     #photos div {
         height: 100%;
-        margin-right: 10%;
+        margin-bottom: 0%;
+        margin-right: 4%;
     }
     #thumbs_scroll {
-        display: none;
+        overflow-x: auto;
+        height: auto%;
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 5%;
+    }
+    #thumbs {
+        overflow-x: auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: auto;
+        justify-content: flex-start;
+    }
+    #thumbs div {
+        margin-bottom: 0%;
+        margin-right: 2%;
     }
     .frame img {
         object-fit: contain;
         width: auto;
-        height: 90vw;
+        height: 100%;
+        justify-content: center;
+        border-radius: 0px;
+    }
+    #thumbs .frame img {
+        object-fit: contain;
+        width: auto;
+        height: 20vw;
         justify-content: center;
         border-radius: 0px;
     }
