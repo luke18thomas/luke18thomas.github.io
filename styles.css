@@ -255,22 +255,23 @@ body {
     }
     #photos {
         height: 100%;
-        width: 100%;
+        width: auto;
         flex-wrap: nowrap;
         justify-content: flex-start;
         align-items: center;
     }
     #photos div {
         height: 100%;
+        width: auto;
         margin-bottom: 0%;
-        margin-right: 4%;
+        margin-right: 2%;
     }
     #thumbs_scroll {
         overflow-x: auto;
         height: auto%;
         width: 100%;
         margin-left: 0%;
-        margin-top: 5%;
+        margin-top: 6%;
     }
     #thumbs {
         overflow-x: auto;
