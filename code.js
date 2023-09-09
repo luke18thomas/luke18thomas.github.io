@@ -37,7 +37,6 @@ if ((current_hour >= 19 && current_hour <= 23) || (current_hour <= 7)) {
 }
 
 /*loadPhotos("summer")
-
 document.querySelector("#photos").style.display = "flex";
 document.querySelector("#thumbs").style.display = "flex";*/
 
@@ -144,10 +143,8 @@ function loadPhotos(p) {
 }
 
 function myScrollTo(id) {
-    console.log('photo-' + id)
-    console.log('thumb-' + id)
     document.getElementById('thumb-'+ id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
-    document.getElementById('photo-'+ id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
+    /*document.getElementById('photo-'+ id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});*/
 }
 
 
