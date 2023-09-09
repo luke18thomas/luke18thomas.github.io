@@ -208,6 +208,7 @@ body {
     }
     #page {
         margin: 1% 0% 1% 0%;
+        height: 100vh;
     }
     #overlay_img {
         object-fit: contain;
@@ -244,6 +245,7 @@ body {
         width: 48vw;
         height: 100%;
         margin-bottom: 1%;
+        margin-top: 2%
     }
     #content {
         margin: 0%;
@@ -251,6 +253,7 @@ body {
         justify-content: center;
         flex-direction: column;
         height: 90vh;
+        overflow-y: hidden;
     }
     #photos_scroll {
         overflow-x: auto;
