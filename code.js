@@ -7,12 +7,15 @@ let files = [];
 
 
 for (k = 100; k > 0; k--) {
-    
+
     let n = '00' + k;
     n = n.substring(n.length - 2, n.length);
 
     if (k <= 44) {
         files.push("photos/favorites/fuji-" + n + ".jpg");
+    }
+    if (k <= 14) {
+        files.push("photos/london/london-" + n + ".jpg");
     }
     if (k <= 42) {
         files.push("photos/summer/fuji-" + n + ".jpg");
@@ -47,7 +50,7 @@ document.querySelector("#thumbs").style.display = "flex";*/
 function toggleDarkMode() {
 
     if (!dark) {
-        
+
         document.querySelector('body').style.backgroundColor = 'rgb(12,12,14)';
         document.querySelector('body').style.color = 'rgb(250,250,250)';
         document.querySelector('#instagram_link').src = document.querySelector('#instagram_link').src.replace("insta", "insta_white");
@@ -92,18 +95,18 @@ function changeView(path) {
             block: 'center',
             inline: 'center'
     });*/
-        
+
 }
 
 function loadPhotos(p) {
-    
+
     /*document.querySelectorAll(".category").forEach((el) => el.style.fontWeight = 200);*/
     /*document.querySelector("#" + p).style.fontWeight = 600;*/
-    
+
     /*let numNodes = document.querySelector('#photos').childNodes.length;*/
-    
+
     document.querySelector("#photos").replaceChildren();
-        
+
     files.forEach((path) => {
 
         /*console.log(path)*/
@@ -112,18 +115,18 @@ function loadPhotos(p) {
 
             let n = path.substring(path.indexOf('-')+1, path.indexOf('-') + 3);
             let id = p + '-' + n;
-            
+
             let el = document.createElement("div");
             /*el.innerHTML = "<div class='frame' id='photo-" + path + "' onClick = changeView('" + path + "')> <img src='" + path + "'> </div> ";*/
             el.innerHTML = "<div class='frame' id='photo-" + path + "' onClick = changeView('" + path + "') onMouseOver = myScrollTo('" + path + "')> <img src='" + path + "'> </div> ";
-            
+
             document.querySelector("#photos").append(el);
 
             }
         })
 
     document.querySelector("#thumbs").replaceChildren();
-        
+
     files.forEach((path) => {
 
         /*console.log(path)*/
@@ -132,10 +135,10 @@ function loadPhotos(p) {
 
             let n = path.substring(path.indexOf('-')+1, path.indexOf('-') + 3);
             let id = p + '-' + n;
-            
+
             let el = document.createElement("div");
             el.innerHTML = "<div class='frame' id='thumb-" + path + "' onClick = myScrollTo('" + path + "')> <img src='" + path + "'> </div> ";
-            
+
             document.querySelector("#thumbs").append(el);
 
             }
@@ -162,7 +165,7 @@ function setPhoto(k) {
 }
 
 function changePhoto(dir, source) {
-    
+
     if (dir ==  'left') {
         if (i == 0) i = files.length - 1
         else i--
@@ -172,7 +175,7 @@ function changePhoto(dir, source) {
         else i++
     }
     document.getElementById('photo').src = files[i];
-    
+
 }
 
 /*
@@ -185,17 +188,17 @@ document.addEventListener('keypress', function(e) {
 */
 
 document.getElementById("overlay_img").addEventListener("click", function(e) {
-    
+
     var x = e.clientX;
     let mid = document.getElementById("overlay_img").width;
 
     /*console.log("overlay_img");
-    
+
     if (x < mid/2)
         console.log("left")
     else
         console.log("right")*/
-    
+
 })
 
 document.getElementById("photos").addEventListener("scroll", function(e) {
@@ -203,10 +206,10 @@ document.getElementById("photos").addEventListener("scroll", function(e) {
     console.log(e)
 
     /*console.log("overlay_img");
-    
+
     if (x < mid/2)
         console.log("left")
     else
         console.log("right")*/
-    
+
 })
