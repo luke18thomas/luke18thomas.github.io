@@ -14,8 +14,11 @@ for (k = 100; k > 0; k--) {
     if (k <= 44) {
         files.push("photos/favorites/fuji-" + n + ".jpg");
     }
-    if (k <= 14) {
-        files.push("photos/london/london-" + n + ".jpg");
+    if (k <= 23) {
+        files.push("photos/london/fuji-" + n + ".jpg");
+    }
+    if (k <= 23) {
+        files.push("photos/paris/fuji-" + n + ".jpg");
     }
     if (k <= 42) {
         files.push("photos/summer/fuji-" + n + ".jpg");
@@ -38,7 +41,7 @@ var date = new Date();
 var current_hour = date.getHours();
 /*console.log(current_hour);*/
 
-if ((current_hour >= 19 && current_hour <= 23) || (current_hour <= 7)) {
+if ((current_hour >= 19 && current_hour <= 23) || (current_hour <= 6)) {
     toggleDarkMode();
 }
 
