@@ -151,57 +151,6 @@ body {
     border-radius: 10px;
 }
 
-/*@media screen and (max-width: 980px) {
-    body {
-        margin: 3% 0% 3% 0%;
-    }
-    #page {
-        margin: 1% 2% 1% 2%;
-    }
-    #overlay_img {
-        object-fit: contain;
-        width: 98vw;
-        max-height: 98vh;
-        max-width: 98vw;
-        justify-content: center;
-        justify-items: center;
-        border-radius: 0px;
-    }
-    .header #header_left {
-        font-size: 0.6em;
-    }
-    .header #header_right {
-        font-size: 1em;
-    }
-    .header #home {
-        font-size: 1.5em;
-        letter-spacing: 0em;
-        font-weight: 300;
-    }
-    #menu {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-start;
-        height: auto;
-    }
-    #menu .frame {
-        width: 48vw;
-        height: 100%;
-        margin-bottom: 1%;
-    }
-    #content {
-        margin: 0%;
-        justify-content: center;
-    }
-    #photos {
-        height: auto;
-        width: 100%;
-    }
-    #photos div {
-        height: 100%;
-    }*/
-
 @media screen and (max-width: 650px) {
     body {
         margin: 3% 0% 3% 0%;
