@@ -208,7 +208,7 @@ body {
     }
     #page {
         margin: 1% 0% 1% 0%;
-        height: 100vh;
+        height: 100%;
     }
     #overlay_img {
         object-fit: contain;
