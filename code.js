@@ -190,29 +190,33 @@ document.addEventListener('keypress', function(e) {
 })
 */
 
+/*
 document.getElementById("overlay_img").addEventListener("click", function(e) {
 
     var x = e.clientX;
     let mid = document.getElementById("overlay_img").width;
 
-    /*console.log("overlay_img");
+    console.log("overlay_img");
 
     if (x < mid/2)
         console.log("left")
     else
-        console.log("right")*/
+        console.log("right")
 
 })
+*/
 
+/*
 document.getElementById("photos").addEventListener("scroll", function(e) {
 
     console.log(e)
 
-    /*console.log("overlay_img");
+    console.log("overlay_img");
 
     if (x < mid/2)
         console.log("left")
     else
-        console.log("right")*/
+        console.log("right")
 
 })
+*/
