@@ -153,7 +153,7 @@ function loadPhotos(p) {
 
 function myScrollTo(id) {
     /*document.getElementById('thumb-'+ id).scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});*/
-    /*document.getElementById('photo-'+ id).scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});*/
+    document.getElementById('photo-'+ id).scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
 }
 
 
