@@ -17,7 +17,7 @@ for (k = 100; k > 0; k--) {
     if (k <= 23) {
         files.push("photos/london/fuji-" + n + ".jpg");
     }
-    if (k <= 23) {
+    if (k <= 25) {
         files.push("photos/paris/fuji-" + n + ".jpg");
     }
     if (k <= 42) {
