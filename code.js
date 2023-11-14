@@ -11,25 +11,25 @@ for (k = 100; k > 0; k--) {
     let n = '00' + k;
     n = n.substring(n.length - 2, n.length);
 
-    if (k <= 44) {
+    if (k <= 49) {
         files.push("photos/favorites/fuji-" + n + ".jpg");
     }
-    if (k <= 23) {
+    if (k <= 17) {
         files.push("photos/london/fuji-" + n + ".jpg");
     }
-    if (k <= 25) {
+    if (k <= 16) {
         files.push("photos/paris/fuji-" + n + ".jpg");
     }
-    if (k <= 42) {
+    if (k <= 18) {
         files.push("photos/summer/fuji-" + n + ".jpg");
     }
-    if (k <= 18) {
+    if (k <= 15) {
         files.push("photos/spring/fuji-" + n + ".jpg");
     }
     if (k <= 17) {
         files.push("photos/winter/fuji-" + n + ".jpg");
     }
-    if (k <= 13) {
+    if (k <= 15) {
         files.push("photos/portrait/fuji-" + n + ".jpg");
     }
     if (k <= 12) {
@@ -41,9 +41,9 @@ var date = new Date();
 var current_hour = date.getHours();
 /*console.log(current_hour);*/
 
-if ((current_hour >= 17 && current_hour <= 23) || (current_hour <= 6)) {
+/*if ((current_hour >= 17 && current_hour <= 23) || (current_hour <= 6)) {
     toggleDarkMode();
-}
+}*/
 
 /*loadPhotos("film")
 document.querySelector("#photos").style.display = "flex";
