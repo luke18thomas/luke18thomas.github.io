@@ -41,9 +41,9 @@ var date = new Date();
 var current_hour = date.getHours();
 /*console.log(current_hour);*/
 
-/*if ((current_hour >= 17 && current_hour <= 23) || (current_hour <= 6)) {
+if ((current_hour >= 17 && current_hour <= 23) || (current_hour <= 6)) {
     toggleDarkMode();
-}*/
+}
 
 /*loadPhotos("film")
 document.querySelector("#photos").style.display = "flex";
