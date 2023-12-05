@@ -83,7 +83,6 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    display: none;
 }
 #menu .frame {
     width: 25%;

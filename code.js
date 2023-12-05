@@ -1,7 +1,7 @@
 let i = 0;
 let k = 0;
 let dark = false;
-let state = 'grid';
+let state = 'home';
 
 let files = [];
 
@@ -45,7 +45,7 @@ if ((current_hour >= 17 && current_hour <= 23) || (current_hour <= 6)) {
     toggleDarkMode();
 }
 
-loadPhotos('paris')
+/*loadPhotos('paris')*/
 
 function toggleDarkMode() {
 
@@ -121,25 +121,6 @@ function loadPhotos(p) {
             el.innerHTML = "<div class='frame' id='photo-" + path + "' onClick = changeView('" + path + "') onMouseOver = myScrollTo('" + path + "')> <img src='" + path + "'> </div> ";
 
             document.querySelector("#photos").append(el);
-
-            }
-        })
-
-    document.querySelector("#thumbs").replaceChildren();
-
-    files.forEach((path) => {
-
-        /*console.log(path)*/
-
-        if (path.indexOf(p) != -1) {
-
-            let n = path.substring(path.indexOf('-')+1, path.indexOf('-') + 3);
-            let id = p + '-' + n;
-
-            let el = document.createElement("div");
-            el.innerHTML = "<div class='frame' id='thumb-" + path + "' onClick = myScrollTo('" + path + "')> <img src='" + path + "'> </div> ";
-
-            document.querySelector("#thumbs").append(el);
 
             }
         })
