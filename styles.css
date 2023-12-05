@@ -147,7 +147,6 @@ body {
     }
     #page {
         margin: 1% 2% 1% 2%;
-        height: 100%;
     }
     #overlay_img {
         object-fit: contain;
@@ -191,6 +190,5 @@ body {
         margin-top: 4%;
         justify-content: center;
         flex-direction: column;
-        height: 90vh;
-        overflow-y: hidden;
+        height: auto;
     }
