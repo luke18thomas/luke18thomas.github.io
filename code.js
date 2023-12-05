@@ -1,7 +1,7 @@
 let i = 0;
 let k = 0;
 let dark = false;
-let state = 'home';
+let state = 'grid';
 
 let files = [];
 
@@ -45,10 +45,7 @@ if ((current_hour >= 17 && current_hour <= 23) || (current_hour <= 6)) {
     toggleDarkMode();
 }
 
-/*loadPhotos("film")
-document.querySelector("#photos").style.display = "flex";
-document.querySelector("#thumbs").style.display = "flex";*/
-
+loadPhotos('paris')
 
 function toggleDarkMode() {
 
@@ -153,7 +150,7 @@ function loadPhotos(p) {
 
 function myScrollTo(id) {
     /*document.getElementById('thumb-'+ id).scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});*/
-    document.getElementById('photo-'+ id).scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
+    /*document.getElementById('photo-'+ id).scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});*/
 }
 
 
