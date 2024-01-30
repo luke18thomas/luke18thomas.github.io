@@ -27,6 +27,7 @@ body {
 #overlay_frame {
     top: 33vh;
     object-fit: contain;
+    cursor: pointer;
 }
 #overlay_img {
     object-fit: contain;
@@ -96,17 +97,17 @@ body {
     overflow: auto;
 }
 #content a {
-    margin: 0vw 2vw 0vw 2vw;
+    margin: 0vw 0vw 0vw 0vw;
 }
-#photos {    
-    -webkit-column-count: 2;
-    -webkit-column-gap: 0px;    
-     column-count: 2;    
-     column-gap: 1.5em;    
+#photos {
+    column-count: 1;
+    -webkit-column-count: 1;
+    column-gap: 1.5em;
+    -webkit-column-gap: 0px;
 }
 #photos div {    
-   width: 100% !important;    
-   height: auto !important;  
+    width: 100% !important;
+    height: auto !important;
 }  
 #images-wrapper{    
    display:inline-block;    
@@ -123,6 +124,9 @@ body {
     width: 50%;
     height: auto;
     margin-bottom: 1.5em;
+}
+.frame {
+    cursor: pointer;
 }
 .frame div {
     width: 50%;
@@ -174,12 +178,12 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         height: auto;
         margin: 2%;
     }
     #menu .frame {
-        width: 48vw;
+        width: 46vw;
         height: 100%;
         margin-bottom: 1%;
         margin-top: 2%
